@@ -1,6 +1,0 @@
-{
-    "rewrites": [{
-        "source": "/((?!_next|api|.*\\.).*)",
-        "destination": "/$1.html"
-    }]
-}
