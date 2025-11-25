@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <SectionWrapper
       as="footer"
-      className={cn("bg-surface-dark border-t border-surface-dark-border py-6")}
+      className={cn("bg-surface border-t border-background py-6")}
     >
       <div className={cn(WIDTH_CONSTRAINT)}>
         {/* Bottom Links */}
