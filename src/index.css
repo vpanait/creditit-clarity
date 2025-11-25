@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700&display=block");
+@import "tailwindcss";
+
+/* Load Dirham font */
+
+@font-face {
+    font-family: "Dirham";
+    src: url("./fonts/dirham.woff2") format("woff2"), url("./fonts/dirham.woff") format("woff"), url("./fonts/dirham.ttf") format("truetype"), url("./fonts/dirham.otf") format("opentype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --color-border: hsl(var(--border));
+    --color-input: hsl(var(--input));
+    --color-ring: hsl(var(--ring));
+    --color-background: hsl(var(--background));
+    --color-background-accent: hsl(var(--background-accent));
+    --color-foreground: hsl(var(--foreground));
+    --color-primary: hsl(var(--primary));
+    --color-primary-foreground: hsl(var(--primary-foreground));
+    --color-secondary: hsl(var(--secondary));
+    --color-secondary-foreground: hsl(var(--secondary-foreground));
+    --color-accent: hsl(var(--accent));
+    --color-accent-foreground: hsl(var(--accent-foreground));
+    --color-muted: hsl(var(--muted));
+    --color-muted-foreground: hsl(var(--muted-foreground));
+    --color-standout: hsl(var(--standout));
+    --color-icon: hsl(var(--icon));
+    --color-surface: hsl(var(--surface));
+    --color-surface-border: hsl(var(--surface-border));
+    --color-surface-dark: hsl(var(--surface-dark));
+    --color-surface-dark-border: hsl(var(--surface-dark-border));
+    --color-surface-dark-text: hsl(var(--surface-dark-text));
+    --font-syne: Syne, "Arial Black", Arial, sans-serif;
+    --font-sans: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-dirham: Dirham, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
+        }
+    }
+}
+
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+
+@layer base {
+    *,
+     ::after,
+     ::before,
+     ::backdrop,
+     ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+@layer base {
+     :root {
+        --background: 180 36% 9%;
+        --foreground: 0 0% 100%;
+        --background-accent: 180 36% 15%;
+        --standout: 180 7% 49%;
+        /* Icon Colors */
+        --icon: 180 36% 9%;
+        /* Surface Colors */
+        --surface: 180 19% 17%;
+        --surface-border: 180 19% 17%;
+        --surface-dark: 180 25% 6%;
+        --surface-dark-border: 180 10% 48%;
+        --surface-dark-text: 180 7% 50%;
+        --primary: 180 25% 6%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 18 22% 97%;
+        --secondary-foreground: 0 4% 11%;
+        --accent: 66 100% 40%;
+        --accent-foreground: 0 4% 11%;
+        --muted: 349 10% 79%;
+        --muted-foreground: 7 5% 49%;
+        --border: 18 22% 93%;
+        --input: 18 22% 93%;
+        --ring: 0 4% 11%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-display: swap;
+        /* Prevent layout shift with consistent line height */
+        line-height: 1.5;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* font-family: 'Syne', 'Arial Black', Arial, sans-serif; */
+        font-display: swap;
+        /* Consistent line height and weight to prevent shifts */
+        line-height: 1.2;
+        /* font-weight: 700; */
+    }
+    h1 {
+        font-family: var(--font-syne);
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.125rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    h6 {
+        font-size: 0.875rem;
+    }
+    /* Ensure font classes have consistent metrics */
+    .font-syne {
+        font-family: "Syne", "Arial Black", Arial, sans-serif;
+        font-display: block;
+        line-height: 1.2;
+    }
+    .font-sans {
+        font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-display: swap;
+        line-height: 1.5;
+    }
+    .font-dirham {
+        font-family: "Dirham", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-display: swap;
+        line-height: 1.2;
+    }
+    /* Scroll-based navigation effects */
+    .scroll-fade-out {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .scroll-center {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+    /* When scrolled, fade out logo and buttons, keep center nav visible */
+    .scrolled .scroll-fade-out {
+        opacity: 0;
+    }
+    .scrolled .scroll-center {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
