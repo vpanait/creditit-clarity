@@ -59,16 +59,7 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
   const { trackFormSubmit } = useGTM();
 
   const labelClassName = "text-sm font-medium";
-  const errorClassName = "text-xs text-red-500 -mt-1";
-
-  useEffect(() => {
-    if (isOpen) {
-      collectFormMetadata().then((metadata) => {
-        setMetadata(metadata);
-        console.log('metadata :', metadata);
-      });
-    }
-  }, [isOpen]);
+  const errorClassName = "text-xs text-red-400 -mt-1";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -82,6 +73,18 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
       comments: "",
     },
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      collectFormMetadata().then((metadata) => {
+        setMetadata(metadata);
+      });
+    } else {
+      // Reset form when dialog closes
+      form.reset();
+      setMetadata(null);
+    }
+  }, [isOpen, form]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
@@ -118,9 +121,26 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
     }
   };
 
+  const handleOpenChange = (open: boolean) => {
+    // Only allow closing via the X button, not by clicking outside
+    if (!open) {
+      onClose();
+    }
+  };
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-md max-h-[95vh] max-w-[95vw] overflow-y-auto lg:translate-y-0 lg:translate-x-0 lg:left-auto lg:right-10 lg:top-6 ">
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
+      <DialogContent 
+        className="w-md max-h-[95vh] max-w-[95vw] overflow-y-auto lg:translate-y-0 lg:translate-x-0 lg:left-auto lg:right-10 lg:top-6"
+        onInteractOutside={(e) => {
+          // Prevent closing when clicking outside
+          e.preventDefault();
+        }}
+        onEscapeKeyDown={(e) => {
+          // Allow closing with Escape key
+          onClose();
+        }}
+      >
         <DialogHeader>
           <DialogTitle className="text-3xl font-bold text-text-primary font-syne">
             Request a call
@@ -151,7 +171,13 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     aria-invalid={fieldState.invalid}
                     placeholder="John Smith"
                     autoComplete="given-name"
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
+                    onChange={(e) => {
+                      field.onChange(e);
+                      if (fieldState.invalid) {
+                        form.trigger('name');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>
@@ -175,8 +201,14 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     type="email"
                     aria-invalid={fieldState.invalid}
                     placeholder="your.name@company.com"
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
                     autoComplete="email"
+                    onChange={(e) => {
+                      field.onChange(e);
+                      if (fieldState.invalid) {
+                        form.trigger('email');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>
@@ -199,8 +231,14 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     id="signup-form-company"
                     aria-invalid={fieldState.invalid}
                     placeholder="Institution / Company Name"
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
                     autoComplete="organization"
+                    onChange={(e) => {
+                      field.onChange(e);
+                      if (fieldState.invalid) {
+                        form.trigger('company');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>
@@ -223,8 +261,14 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     id="signup-form-role"
                     aria-invalid={fieldState.invalid}
                     placeholder="CEO, Manager, Director"
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
                     autoComplete="organization-title"
+                    onChange={(e) => {
+                      field.onChange(e);
+                      if (fieldState.invalid) {
+                        form.trigger('role');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>
@@ -249,8 +293,14 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     id="signup-form-phone"
                     aria-invalid={fieldState.invalid}
                     placeholder="(+971) 234-567-89"
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
                     defaultCountry="AE"
+                    onChange={(value) => {
+                      field.onChange(value);
+                      if (fieldState.invalid) {
+                        form.trigger('phone');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>
@@ -273,8 +323,14 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
                     id="signup-form-comments"
                     aria-invalid={fieldState.invalid}
                     placeholder="Provide basic information about your institution and objectives."
-                    className={cn(fieldState?.error?.message && 'border-red-500')}
+                    className={cn(fieldState?.error?.message && 'border-red-400')}
                     rows={2}
+                    onChange={(e) => {
+                      field.onChange(e);
+                      if (fieldState.invalid) {
+                        form.trigger('comments');
+                      }
+                    }}
                   />
                   {fieldState.invalid && (
                     <p className={errorClassName}>{fieldState.error?.message}</p>

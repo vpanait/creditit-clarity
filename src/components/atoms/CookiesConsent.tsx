@@ -168,12 +168,12 @@ const CookieConsent = React.forwardRef<HTMLDivElement, CookieConsentProps>(
     return (
       <>
         <div {...commonWrapperProps}>
-          <Card className="bg-surface-dark m-6 shadow-lg">
+          <Card className="bg-background/30 backdrop-blur-md rounded-lg m-6 shadow-lg border-0">
             <CardHeader className="space-y-2">
               <CardTitle className="text-base text-white !font-medium">Cookie Settings</CardTitle>
-              <CardDescription className="text-sm text-standout">
+              <CardDescription className="text-sm text-white">
                 We use cookies to enhance your experience, analyze site traffic and deliver personalized content.{" "}
-                <Link href="/cookies" className="text-white underline hover:underline">
+                <Link href="/cookies" className="text-white/80 hover:text-white underline hover:underline">
                   Read our Cookie Policy
                 </Link>
               </CardDescription>
@@ -182,7 +182,7 @@ const CookieConsent = React.forwardRef<HTMLDivElement, CookieConsentProps>(
               <Button
                 onClick={handleCustomize}
                 variant="outline"
-                className="flex-1"
+                className="flex-1 bg-transparent border-standout text-white hover:bg-background/60 hover:text-white"
               >
                 Customize
               </Button>
@@ -195,7 +195,7 @@ const CookieConsent = React.forwardRef<HTMLDivElement, CookieConsentProps>(
 
         {/* Cookie Customization Dialog */}
         <Dialog open={showCustomizeDialog} onOpenChange={setShowCustomizeDialog}>
-          <DialogContent className="sm:max-w-md">
+          <DialogContent className="sm:max-w-md border-0">
             <DialogHeader>
               <DialogTitle>Cookie Preferences</DialogTitle>
               <DialogDescription>
@@ -280,6 +280,7 @@ const CookieConsent = React.forwardRef<HTMLDivElement, CookieConsentProps>(
               <Button
                 variant="outline"
                 onClick={handleRejectAll}
+                className="bg-transparent border-standout text-white hover:bg-background/60 hover:text-white"
               >
                 Reject All
               </Button>

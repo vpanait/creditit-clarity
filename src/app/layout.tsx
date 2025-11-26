@@ -107,7 +107,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               // GTM will be loaded via React when user accepts analytics cookies
-              window.GTM_CONTAINER_ID = 'GTM-NBJT8G5H';
+              window.GTM_CONTAINER_ID = 'GTM-K4H528HR';
             `,
           }}
         />

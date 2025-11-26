@@ -10,13 +10,9 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
+  CommandDialog,
 } from "@/components/ui/command";
 import { Input } from "@/components/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { FlagIconComponent } from "./FlagIcon";
@@ -103,36 +99,38 @@ const CountrySelect = ({
   }, [countryList, search]);
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          type="button"
-          variant="outline"
-          className="flex gap-1 rounded-e-none rounded-s-lg border-r-0 px-3 focus:z-50 z-50"
-          disabled={disabled}
-        >
-          <FlagIconComponent
-            country={selectedCountry}
-            countryName={selectedCountry}
-          />
-          <ChevronsUpDown
-            className={cn(
-              "-mr-2 size-4 opacity-50",
-              disabled ? "hidden" : "opacity-100",
-            )}
-          />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[300px] p-0 bg-white">
-        <Command shouldFilter={false}>
-          <CommandInput
-            placeholder="Search country..."
-            value={search}
-            onValueChange={setSearch}
-          />
-          <CommandList>
-            <ScrollArea className="h-72" key={search}>
-              <CommandEmpty>No country found.</CommandEmpty>
+    <>
+      <Button
+        type="button"
+        variant="outline"
+        className="flex gap-1 rounded-e-none rounded-s-lg border-r-0 px-3 focus:z-50 z-50"
+        disabled={disabled}
+        onClick={() => setOpen(true)}
+      >
+        <FlagIconComponent
+          country={selectedCountry}
+          countryName={selectedCountry}
+        />
+        <ChevronsUpDown
+          className={cn(
+            "-mr-2 size-4 opacity-50",
+            disabled ? "hidden" : "opacity-100",
+          )}
+        />
+      </Button>
+      <CommandDialog open={open} onOpenChange={setOpen}>
+        <Command shouldFilter={false} className="bg-surface">
+          <div className="border-b border-surface-border">
+            <CommandInput
+              placeholder="Search country..."
+              value={search}
+              onValueChange={setSearch}
+              className="bg-surface text-foreground"
+            />
+          </div>
+          <ScrollArea className="h-[300px]">
+            <CommandList>
+              <CommandEmpty className="py-6 text-center text-sm text-muted-foreground">No country found.</CommandEmpty>
               <CommandGroup>
                 {filteredCountries.map(({ value, label }) =>
                   value ? (
@@ -149,11 +147,11 @@ const CountrySelect = ({
                   ) : null,
                 )}
               </CommandGroup>
-            </ScrollArea>
-          </CommandList>
+            </CommandList>
+          </ScrollArea>
         </Command>
-      </PopoverContent>
-    </Popover>
+      </CommandDialog>
+    </>
   );
 };
 
@@ -168,13 +166,25 @@ const CountrySelectOption = ({
   selectedCountry,
   onChange,
 }: CountrySelectOptionProps) => {
+  const isSelected = country === selectedCountry;
   return (
-    <CommandItem className="gap-2" onSelect={() => onChange(country)}>
+    <CommandItem
+      className={cn(
+        "gap-2 text-sm",
+        "data-[selected=true]:text-foreground",
+        // "text-foreground hover:bg-accent hover:text-foreground",
+        isSelected && "bg-accent/50"
+      )}
+      onSelect={() => onChange(country)}
+    >
       <FlagIconComponent country={country} countryName={countryName} />
-      <span className="flex-1 text-sm">{countryName}</span>
-      <span className="text-sm text-foreground/50">{`+${RPNInput.getCountryCallingCode(country)}`}</span>
+      <span className="flex-1">{countryName}</span>
+      <span>{`+${RPNInput.getCountryCallingCode(country)}`}</span>
       <CheckIcon
-        className={`ml-auto size-4 ${country === selectedCountry ? "opacity-100" : "opacity-0"}`}
+        className={cn(
+          "ml-auto size-4 text-accent",
+          isSelected ? "opacity-100" : "opacity-0"
+        )}
       />
     </CommandItem>
   );

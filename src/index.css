@@ -100,7 +100,8 @@
         --accent: 66 100% 40%;
         --accent-foreground: 0 4% 11%;
         --muted: 349 10% 79%;
-        --muted-foreground: 7 5% 49%;
+        --muted-foreground: 349 10% 79%;
+        /* --muted-foreground: 7 5% 49%; */
         --border: 18 22% 93%;
         --input: 18 22% 93%;
         --ring: 0 4% 11%;
