@@ -20,12 +20,12 @@ const AboutCreditit = () => {
           <div className="space-y-2">
             <p className="text-sm text-standout mb-2">About Creditit</p>
             <h1>
-              Security & Safety
+              Who We Are
             </h1>
           </div>
 
           <p className="text-muted text-lg max-w-[508px]">
-            Creditit is an independent data servicer enabling banks, credit funds, and financial institutions to operate modern lending programs at scale across the GCC. Our team combines deep credit expertise, data engineering, and operational discipline.
+            Creditit is an independent data infrastructure provider for institutional lenders. Our team combines deep credit expertise, data engineering, and operational discipline.
           </p>
 
         </motion.div>

@@ -32,13 +32,13 @@ const ContactSection = () => {
               Contact
             </p>
             <h1>
-              Request More Information
+              Schedule a Consultation
             </h1>
           </div>
 
 
           <p className="text-muted text-lg max-w-[508px] mb-10">
-            We typically work with banks, credit funds, and regulated lenders. Submit your details and our team will contact you within one business day.
+            Built for banks, credit funds, and regulated lenders. Submit your details and our team will contact you within one business day.
           </p>
 
           <RequestCallButton variant="reverse" className="w-full lg:w-auto" />
