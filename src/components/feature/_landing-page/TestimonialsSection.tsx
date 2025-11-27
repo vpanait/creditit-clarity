@@ -22,34 +22,16 @@ const testimonials: ITestimonialItem[] = [
   {
     image: "/backgrounds/testimonial-1.png",
     quote:
-      "Creditit gives us the data discipline and real-time transparency we need to run complex transactions in the region. Their reporting cadence and auditability are significantly above local standards.",
-    company: "Global Bank (Japan / GCC)",
-    kpi: [
-      {
-        label: "Increase in Processing Speed",
-        value: "62%",
-      },
-      {
-        label: "Accuracy Improvements",
-        value: "35%",
-      },
-    ],
+      "Their reporting and audit trails meet the standards we expect globally. It's rare to find this level of data discipline in the region.",
+    company: "Head of Structured Finance, International Bank",
+    kpi: [],
   },
   {
     image: "/backgrounds/testimonial-2.jpg",
     quote:
-      "As a regional lender, we needed a solution that could handle our diverse portfolio across multiple markets. Creditit's platform has transformed our credit assessment process, enabling us to make faster, more informed lending decisions while maintaining strict compliance standards.",
-    company: "Regional Commercial Lender (UAE)",
-    kpi: [
-      {
-        label: "Reduction in Decision Time",
-        value: "48%",
-      },
-      {
-        label: "Improvement in Risk Assessment",
-        value: "41%",
-      },
-    ],
+      "We needed a partner who understood local regulatory requirements and data infrastructure. Creditit delivered exactly that: reliable reporting and full audit readiness.",
+    company: "Director of Credit Operations, Regional Commercial Bank",
+    kpi: [],
   },
 ];
 

@@ -14,19 +14,17 @@ const HeroSection = () => {
 
         <div className="text-text-primary space-y-6 z-10 flex-1 flex flex-col items-center justify-center text-center">
           <h1 className="font-syne font-bold  text-[32px] xl:text-[44px]">
-            Intelligent Data Systems
+            Data Infrastructure for
             <br className="hidden xl:block" />
-            {" "}for Institutional Credit
+            {" "}Institutional Lending
           </h1>
 
           <p className="text-lg">
-            Creditit provides regulated lenders with secure data {" "}
+            We help banks and credit funds monitor collateral, {" "}
             <br className="hidden xl:block" />
-            {" "}agent services, real-time collateral monitoring, {" "}
+            {" "}manage risk, and scale lending operations. Full {" "}
             <br className="hidden xl:block" />
-            {" "}and automated risk intelligence for asset-backed {" "}
-            <br className="hidden xl:block" />
-            {" "}and structured finance transactions.{" "}
+            {" "}audit trails and regulatory compliance built in.{" "}
           </p>
 
           <div className="flex items-center gap-6 mt-4">

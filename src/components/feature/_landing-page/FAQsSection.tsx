@@ -33,24 +33,24 @@ function generateFAQSchema(faqs: FAQItem[]) {
 
 const faqItems: FAQItem[] = [{
   id: "services-financial-institutions",
-  question: "What services does Creditit provide to financial institutions?",
-  answer: "Creditit provides comprehensive credit operations and data management services to financial institutions including banks, lenders, and credit providers. Our platform offers real-time credit assessment, automated risk analysis, receivables monitoring, and working capital facility management. We act as a Data Agent and Backup Servicer, ensuring data discipline, transparency, and auditability that meets international standards. Our services help institutions make faster, more informed lending decisions while maintaining strict compliance with regional and global financial regulations.",
+  question: "What services does Creditit provide?",
+  answer: "We provide data agent services, backup servicing, borrowing base monitoring, and risk intelligence for banks and credit funds. Our platform ensures real-time transparency, full audit trails, and regulatory compliance.",
 }, {
   id: "data-agent-backup-servicer",
-  question: "How does Creditit act as a Data Agent or Backup Servicer ?",
-  answer: "As a Data Agent, Creditit collects, validates, and manages financial data from borrowers' accounting systems, bank statements, and other sources. We provide real-time data feeds to lenders, ensuring transparency and accuracy throughout the credit lifecycle. As a Backup Servicer, we maintain comprehensive records and can seamlessly step in to manage servicing operations if needed, ensuring business continuity. Our platform provides standardized reporting cadence, audit trails, and data validation that significantly exceeds local standards, giving lenders confidence in their credit operations.",
+  question: "How does Creditit act as a Data Agent or Backup Servicer?",
+  answer: "As a Data Agent, we collect and validate financial data from borrowers and provide real-time reporting to lenders. As a Backup Servicer, we maintain comprehensive records and can step in to manage servicing operations if needed.",
 }, {
   id: "data-security",
-  question: "How secure is the data processed through Creditit's platform?",
-  answer: "Creditit employs bank-grade security standards to protect all financial data. All information is encrypted both in transit and at rest using industry-standard encryption protocols. Our platform is built with strict access controls, role-based permissions, and comprehensive audit logging. We comply with international data protection regulations and regional financial standards, ensuring that sensitive borrower and lender information remains confidential and secure. Regular security audits, penetration testing, and compliance certifications ensure our platform meets the highest security standards expected by financial institutions.",
+  question: "How secure is the data on Creditit's platform?",
+  answer: "We use bank-grade security with encryption in transit and at rest, strict access controls, and comprehensive audit logging. Regular security audits ensure we meet institutional standards.",
 }, {
   id: "types-lenders-institutions",
-  question: "What types of lenders and institutions typically work with Creditit?",
-  answer: "Creditit works with a diverse range of financial institutions including commercial banks, regional lenders, credit unions, alternative finance providers, and specialized lending institutions. Our platform serves both traditional banks operating in the GCC region and international financial institutions with regional operations. We support institutions offering various credit products including invoice financing, working capital facilities, trade finance, and receivables-based lending. Whether you're a large global bank or a regional commercial lender, Creditit's platform scales to meet your operational needs and regulatory requirements.",
+  question: "What types of institutions work with Creditit?",
+  answer: "We work with commercial banks, credit funds, and regulated lenders offering invoice financing, working capital facilities, trade finance, and receivables-based lending.",
 }, {
-  id: "risk-monitoring-improvement",
-  question: "How does Creditit improve risk monitoring for receivables and working-capital facilities?",
-  answer: "Creditit's AI-powered platform provides real-time risk monitoring and early warning systems for receivables and working capital facilities. Our system continuously analyzes borrower financial data, payment patterns, invoice quality, and customer creditworthiness to identify potential risks before they materialize. We provide automated alerts for payment delays, deteriorating financial health, or changes in borrower behavior. Our comprehensive dashboards give lenders visibility into portfolio performance, concentration risk, and facility utilization. This real-time transparency enables proactive risk management, faster decision-making, and improved portfolio quality, reducing defaults and improving overall facility performance.",
+  id: "implementation-timeline",
+  question: "How long does implementation take?",
+  answer: "Implementation typically takes 2-4 weeks depending on the complexity of your facility structure and data integration requirements. Our team handles the technical setup.",
 }];
 
 
@@ -75,7 +75,7 @@ const FAQsSection = () => {
         <div className="text-center mb-16 space-y-2">
           <p className="text-sm text-standout">FAQs</p>
           <h1>
-            Security, Data, and Credit Operations
+            Frequently Asked Questions
           </h1>
         </div>
 

@@ -6,7 +6,7 @@ const services = [
   {
     icon: <DataAgentServicesIcon />,
     title: "Data Agent Services",
-    description: "For asset-backed, structured finance, and receivables-based facilities.",
+    description: "Secure data collection and reporting for asset-backed lending facilities.",
     items: [
       "Secure data ingestion",
       "Daily/weekly reporting",
@@ -17,20 +17,20 @@ const services = [
   {
     icon: <BackupServicesIcon />,
     title: "Backup Servicing",
-    description: "Independent continuity and recovery servicing for lenders in the GCC.",
+    description: "Business continuity and recovery services if your primary servicer fails.",
     items: [
       "Step-in ready procedures",
-      "Data continuity",
-      "Collection waterfall logic",
+      "Continuous data access",
+      "Collections management",
       "Independent monitoring",
     ]
   },
   {
     icon: <BorrowingBaseMonitoringIcon />,
     title: "Borrowing Base Monitoring",
-    description: "Real-time asset eligibility, concentration checks, and automated BB calculations.",
+    description: "Real-time asset eligibility, concentration checks, and automated borrowing base calculations.",
     items: [
-      "Automated Ineligibility logic",
+      "Automated eligibility checks",
       "Exposure reporting",
       "Facility limit monitoring",
     ]
@@ -38,7 +38,7 @@ const services = [
   {
     icon: <RiskIntelligencePlatformIcon />,
     title: "Risk Intelligence Platform",
-    description: "Full analytics layer powering underwriting and post-funding surveillance.",
+    description: "Analytics for underwriting decisions and ongoing portfolio monitoring.",
     items: [
       "Fraud checks",
       "Payment behavior",
@@ -64,7 +64,7 @@ const ServicesSection = () => {
         >
           <p className="text-sm text-standout mb-2">Services</p>
           <h1>
-            What we do
+            How We Help Lenders Scale
           </h1>
         </motion.div>
 

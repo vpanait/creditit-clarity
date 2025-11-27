@@ -14,8 +14,8 @@ interface IBenefit {
 
 const benefits: IBenefit[] = [
   {
-    title: "Proven in High-Stakes Transactions",
-    description: "Trusted by banks and global FIs to operate in complex structured lending environments.",
+    title: "Deployed in Live Transactions",
+    description: "Trusted by banks and financial institutions to operate in complex structured lending environments.",
     image: "/backgrounds/benefit-1.png",
   },
   {
@@ -24,8 +24,8 @@ const benefits: IBenefit[] = [
     image: "/backgrounds/benefit-2.png",
   },
   {
-    title: "Built for GCC Data and Infrastructure",
-    description: "Designed specifically for UAE and KSA regulatory, operational, and data limitations.",
+    title: "Built for the GCC",
+    description: "Purpose-built for regional regulatory frameworks, local data infrastructure, and operational standards.",
     image: "/backgrounds/benefit-3.png",
   },
 ]

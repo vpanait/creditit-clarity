@@ -5,14 +5,14 @@ export const HELLO_EMAIL = "hello@creditit.ai";
 export const GET_STARTED_FORM_URL = "https://api-dev.creditit.ai/noora/request";
 
 export const META = {
-  TITLE: "Creditit - Intelligent Data Systems for Institutional Credit.",
+  TITLE: "Creditit - Data Infrastructure for Institutional Lending",
   DESCRIPTION:
-    "Creditit provides regulated lenders with secure data agent services, real-time collateral monitoring, and automated risk intelligence for asset-backed and structured finance transactions.",
+    "We help banks and credit funds monitor collateral, manage risk, and scale lending operations. Full audit trails and regulatory compliance built in.",
   KEYWORDS:
     "institutional credit, data agent services, collateral monitoring, risk intelligence, asset-backed finance, structured finance",
-  SHARE_TITLE: "Creditit - Intelligent Data Systems for Institutional Credit",
+  SHARE_TITLE: "Creditit - Data Infrastructure for Institutional Lending",
   SHARE_DESCRIPTION:
-    "Creditit provides regulated lenders with secure data agent services, real-time collateral monitoring, and automated risk intelligence for asset-backed and structured finance transactions.",
+    "We help banks and credit funds monitor collateral, manage risk, and scale lending operations. Full audit trails and regulatory compliance built in.",
 };
 
 export const ROUTE = {
