@@ -2,7 +2,7 @@ export const PHONE_NUMBER = "+971504946720";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/creditit/";
 export const LAST_UPDATED = "October 21, 2025";
 export const HELLO_EMAIL = "hello@creditit.ai";
-export const GET_STARTED_FORM_URL = "https://api-dev.creditit.ai/noora/request";
+export const GET_STARTED_FORM_URL = "https://api-dev.creditit.ai/creditit/request";
 
 export const META = {
   TITLE: "Creditit - Data Infrastructure for Institutional Lending",

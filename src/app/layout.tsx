@@ -42,6 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* GTM Container ID - Set early before React hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.GTM_CONTAINER_ID = 'GTM-K4H528HR';
+            `,
+          }}
+        />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -100,17 +108,6 @@ export default function RootLayout({
           <ScrollToTop />
           {children}
         </ClientProviders>
-        {/* Google Tag Manager - Will be loaded conditionally based on cookie consent */}
-        <Script
-          id="gtm-container-id"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              // GTM will be loaded via React when user accepts analytics cookies
-              window.GTM_CONTAINER_ID = 'GTM-K4H528HR';
-            `,
-          }}
-        />
 
         {/* Font loading detection */}
         <Script
