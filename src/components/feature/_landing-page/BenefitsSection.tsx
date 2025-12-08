@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import RequestCallButton from "@/components/atoms/RequestCallButton";
+import { WIDTH_CONSTRAINT } from "@/const";
 
 interface IBenefit {
   title: string;
@@ -61,7 +62,7 @@ const BenefitsSection = () => {
       <div
         className="sticky top-0 min-h-screen flex items-center py-10 lg:py-20"
       >
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-20 w-full">
+        <div className={cn(WIDTH_CONSTRAINT, "flex flex-col lg:flex-row lg:items-center gap-20 w-full")}>
           <motion.div
             className="flex-1 pt-0 space-y-6 lg:space-y-10"
             initial={{ opacity: 0, x: -50 }}

@@ -9,7 +9,7 @@ const AboutCreditit = () => {
       id="benefits"
       className="py-12 lg:py-20 border-t border-surface-border"
     >
-      <div className={cn("max-w-7xl mx-auto text-center flex flex-col items-center justify-center", WIDTH_CONSTRAINT)}>
+      <div className={cn(WIDTH_CONSTRAINT, "text-center flex flex-col items-center justify-center")}>
         <motion.div
           className="space-y-6 text-center"
           initial={{ opacity: 0, y: 30 }}

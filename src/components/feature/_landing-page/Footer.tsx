@@ -48,6 +48,7 @@ const Footer = () => {
 const FooterLinks = () => {
   return (
     <>
+      <Link href={ROUTE.NEWSROOM} className="text-standout text-sm hover:text-muted transition-colors">Newsroom</Link>
       <Link href={ROUTE.TERMS_OF_USE} className="text-standout text-sm hover:text-muted transition-colors">Terms of Use</Link>
       <Link href={ROUTE.PRIVACY_POLICY} className="text-standout text-sm hover:text-muted transition-colors">Privacy Policy</Link>
       <Link href={ROUTE.COOKIES} className="text-standout text-sm hover:text-muted transition-colors">Cookies</Link>

@@ -2,7 +2,8 @@
 
 import SectionWrapper from "../../atoms/SectionWrapper";
 import RequestCallButton from "../../atoms/RequestCallButton";
-import WhatsappButton from "../../atoms/WhatsappButton";
+import { cn } from "@/lib/utils";
+import { WIDTH_CONSTRAINT } from "@/const";
 
 const steps = [
   {
@@ -25,7 +26,7 @@ const ContactSection = () => {
       id="contact"
       className="py-12 lg:py-20 bg-surface border-b border-background"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className={cn(WIDTH_CONSTRAINT, "flex flex-col lg:flex-row items-center justify-between gap-12")}>
         <div className="space-y-6 flex-1">
           <div className="mb-6 space-y-2">
             <p className="text-sm text-standout">

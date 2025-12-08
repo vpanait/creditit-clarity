@@ -13,20 +13,18 @@ import AboutCreditit from "@/components/feature/_landing-page/AboutCreditit";
 
 export default function HomePage() {
   return (
-    <>
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <HeroSection />
-        <LogosSection />
-        <ServicesSection />
-        <BenefitsSection />
-        <TestimonialsSection />
-        <AboutCreditit />
-        <FAQsSection />
-        <ContactSection />
-        <Footer />
-      </div>
-    </>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <HeroSection />
+      <LogosSection />
+      <ServicesSection />
+      <BenefitsSection />
+      <TestimonialsSection />
+      <AboutCreditit />
+      <FAQsSection />
+      <ContactSection />
+      <Footer />
+    </div>
   )
 }
 

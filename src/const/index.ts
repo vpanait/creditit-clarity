@@ -21,6 +21,7 @@ export const ROUTE = {
   COOKIES: "/cookies",
   TERMS_OF_USE: "/terms-of-use",
   SITEMAP_VIEWER: "/sitemap-viewer",
+  NEWSROOM: "/newsroom",
 };
 export const WEBSITE_URL = "https://creditit.ai";
 export const SECTION_PADDING = "px-4 md:px-8 lg:px-20";

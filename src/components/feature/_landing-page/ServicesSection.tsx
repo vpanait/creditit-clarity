@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { BackupServicesIcon, BorrowingBaseMonitoringIcon, DataAgentServicesIcon, RiskIntelligencePlatformIcon } from "@/components/atoms/icon";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
+import { cn } from "@/lib/utils";
+import { WIDTH_CONSTRAINT } from "@/const";
 
 const services = [
   {
@@ -54,7 +56,7 @@ const ServicesSection = () => {
       id="services"
       className="py-20 lg:py-32 border-t border-surface-border"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className={cn(WIDTH_CONSTRAINT, "flex flex-col items-center justify-center")}>
         <motion.div
           className="mb-6"
           initial={{ opacity: 0, y: 30 }}
