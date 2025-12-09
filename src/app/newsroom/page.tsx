@@ -78,13 +78,13 @@ const NewsroomPage = () => {
 
       <SectionWrapper className={cn("bg-surface border-t border-background py-6")}>
         <div className={cn(WIDTH_CONSTRAINT, "flex flex-col items-center justify-center my-20")}>
-          <p className="text-sm text-standout mb-2">Newsletter</p>
+          <p className="text-sm text-standout mb-2">Contact</p>
 
           <h2 className="font-syne text-[32px] font-bold text-white leading-[40px] mb-10">
-            Subscribe to Creditit Newsroom
+            Schedule a Consultation
           </h2>
 
-          <RequestCallButton size="lg" variant="default" className="text-base">Sign up to newsletter</RequestCallButton>
+          <RequestCallButton size="lg" variant="default" className="text-base">Request a Call</RequestCallButton>
         </div>
 
       </SectionWrapper>
