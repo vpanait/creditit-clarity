@@ -63,7 +63,7 @@ const ArticleLayout = ({
           </div>
 
           {/* Hero Image */}
-          <div className="w-full max-w-[1200px] mx-auto mb-10">
+          <div className="w-full mx-auto mb-10">
             <div className="w-full h-[459px] rounded-lg overflow-hidden">
               <img
                 src={heroImage}
