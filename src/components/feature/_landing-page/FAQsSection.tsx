@@ -46,7 +46,7 @@ const faqItems: FAQItem[] = [{
 }, {
   id: "types-lenders-institutions",
   question: "What types of institutions work with Creditit?",
-  answer: "We work with commercial banks, credit funds, venture debt providers, and regulated lenders offering invoice financing, working capital facilities, trade finance, and receivables-based lending.",
+  answer: "We work with banks, alternative lenders, and private investors across a wide range of credit products",
 }, {
   id: "implementation-timeline",
   question: "How long does implementation take?",
