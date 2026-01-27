@@ -10,6 +10,7 @@ import Footer from "@/components/feature/_landing-page/Footer";
 import BenefitsSection from "@/components/feature/_landing-page/BenefitsSection";
 import TestimonialsSection from "@/components/feature/_landing-page/TestimonialsSection";
 import AboutCreditit from "@/components/feature/_landing-page/AboutCreditit";
+import CrmSection from "@/components/feature/_landing-page/CrmSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <HeroSection />
       <LogosSection />
       <ServicesSection />
+      <CrmSection />
       <BenefitsSection />
       <TestimonialsSection />
       <AboutCreditit />

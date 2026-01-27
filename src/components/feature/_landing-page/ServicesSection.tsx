@@ -54,7 +54,7 @@ const ServicesSection = () => {
   return (
     <SectionWrapper
       id="services"
-      className="py-20 lg:py-32 border-t border-surface-border"
+      className="py-20 lg:py-32 border-t border-b border-surface-border"
     >
       <div className={cn(WIDTH_CONSTRAINT, "flex flex-col items-center justify-center")}>
         <motion.div

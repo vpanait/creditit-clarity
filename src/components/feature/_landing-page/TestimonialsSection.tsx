@@ -22,15 +22,15 @@ const testimonials: ITestimonialItem[] = [
   {
     image: "/backgrounds/testimonial-1.png",
     quote:
-      "Their reporting and audit trails align with global standards and demonstrate a strong level of data discipline. It gives us real confidence in the integrity of the data.",
-    company: "Greg Pospodinis | CEO, Nebula Capital ",
+      "Their dashboards give me deep and real time insights into the data underlying the financial performance of my counterparties. Their data insights provide the clarity and confidence required to operate at the forefront of best practice",
+    company: "Greg Pospodinis | CEO & Founder, Nebula Capital",
     kpi: [],
   },
   {
     image: "/backgrounds/testimonial-2.jpg",
     quote:
       "We needed a partner who understood local regulatory requirements and data infrastructure. Creditit delivered exactly that: reliable reporting and full audit readiness.",
-    company: "Bassel El Koussa | Co-founder and CEO of Quiqup",
+    company: "Bassel El Koussa | Co-founder & CEO, Quiqup",
     kpi: [],
   },
 ];
