@@ -23,14 +23,14 @@ const testimonials: ITestimonialItem[] = [
     image: "/backgrounds/testimonial-1.png",
     quote:
       "Their reporting and audit trails align with global standards and demonstrate a strong level of data discipline. It gives us real confidence in the integrity of the data.",
-    company: "Head of Structured Finance, International Bank",
+    company: "Greg Pospodinis | CEO, Nebula Capital ",
     kpi: [],
   },
   {
     image: "/backgrounds/testimonial-2.jpg",
     quote:
       "We needed a partner who understood local regulatory requirements and data infrastructure. Creditit delivered exactly that: reliable reporting and full audit readiness.",
-    company: "Director of Credit Operations, Regional Commercial Bank",
+    company: "Bassel El Koussa | Co-founder and CEO of Quiqup",
     kpi: [],
   },
 ];
