@@ -29,7 +29,7 @@ const testimonials: ITestimonialItem[] = [
   {
     image: "/backgrounds/testimonial-2.jpg",
     quote:
-      "We needed a partner who understood local regulatory requirements and data infrastructure. Creditit delivered exactly that: reliable reporting and full audit readiness.",
+      "It’s rare to come across teams as genuinely customer-obsessed as the Creditit team. Working with them has been a joy; their nimbleness and ability to respond to our evolving requirements is exceptional. They operate with tight product feedback loops built around real customer needs, and the result is a platform that feels genuinely empowering. For entrepreneurs, it delivers exactly what you hope for: a simple, “get money now” button.",
     company: "Bassel El Koussa | Co-founder & CEO, Quiqup",
     kpi: [],
   },
