@@ -78,7 +78,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg text-muted max-w-[590px]">
-            We support banks, institutional investors, and credit funds with the data, infrastructure, and servicing capabilities required to operate and scale modern lending programs.
+            We support banks, institutional investors, and alternative lenders with the data, infrastructure, and servicing capabilities required to operate and scale modern lending programs.
           </p>
         </motion.div>
 

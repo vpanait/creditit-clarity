@@ -21,9 +21,7 @@ const HeroSection = () => {
           <p className="text-lg">
             We help banks and credit funds monitor collateral, {" "}
             <br className="hidden xl:block" />
-            {" "}manage risk, and scale lending operations. Full {" "}
-            <br className="hidden xl:block" />
-            {" "}audit trails and regulatory compliance built in.{" "}
+            {" "}manage risk, and scale lending operations. 
           </p>
 
           <div className="flex items-center gap-6 mt-4">

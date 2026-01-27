@@ -46,11 +46,11 @@ const faqItems: FAQItem[] = [{
 }, {
   id: "types-lenders-institutions",
   question: "What types of institutions work with Creditit?",
-  answer: "We work with commercial banks, credit funds, and regulated lenders offering invoice financing, working capital facilities, trade finance, and receivables-based lending.",
+  answer: "We work with commercial banks, credit funds, venture debt providers, and regulated lenders offering invoice financing, working capital facilities, trade finance, and receivables-based lending.",
 }, {
   id: "implementation-timeline",
   question: "How long does implementation take?",
-  answer: "Implementation typically takes 2-4 weeks depending on the complexity of your facility structure and data integration requirements. Our team handles the technical setup.",
+  answer: "The platform comes with many ready-to-use features. Custom configurations or data integrations are handled by our team and are typically delivered within 2–4 weeks.",
 }];
 
 

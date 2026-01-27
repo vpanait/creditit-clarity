@@ -22,7 +22,7 @@ const testimonials: ITestimonialItem[] = [
   {
     image: "/backgrounds/testimonial-1.png",
     quote:
-      "Their reporting and audit trails meet the standards we expect globally. It's rare to find this level of data discipline in the region.",
+      "Their reporting and audit trails align with global standards and demonstrate a strong level of data discipline. It gives us real confidence in the integrity of the data.",
     company: "Head of Structured Finance, International Bank",
     kpi: [],
   },
