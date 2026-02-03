@@ -53,22 +53,19 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        {/* Preconnect to Google Fonts for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* Preload critical fonts to prevent FOIT (Flash of Invisible Text) */}
+        {/* Preload Syne so it’s ready by first paint – no FOUT, SEO-safe */}
         <link
           rel="preload"
-          href="https://fonts.gstatic.com/s/syne/v22/8vIS7wqiSa-FD0WjKbqizDl_MfXM.woff2"
+          href="/fonts/syne-latin-700-normal.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
-
-        {/* Load only the font weights we actually use */}
+        {/* Preconnect + Roboto */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Syne:wght@700&display=block"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=block"
           rel="stylesheet"
         />
       </head>
