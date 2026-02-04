@@ -1,7 +1,7 @@
 export const PHONE_NUMBER = "+971504946720";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/creditit/";
 export const LAST_UPDATED = "October 21, 2025";
-export const HELLO_EMAIL = "hello@creditit.ai";
+export const HELLO_EMAIL = "team@creditit.ai";
 export const GET_STARTED_FORM_URL = "https://api.creditit.ai/creditit/request";
 
 export const META = {
