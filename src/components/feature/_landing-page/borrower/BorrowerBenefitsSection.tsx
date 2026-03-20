@@ -15,37 +15,33 @@ interface IBenefit {
 
 const benefits: IBenefit[] = [
   {
-    title: "Deployed in Live Transactions",
-    description: "Trusted by banks and financial institutions to operate in complex structured lending environments.",
+    title: "Know Your Financial Position",
+    description: "Connect your accounting systems and get a live 360° view of your receivables, customer risk scores, and AR health — the same picture a lender would want to see.",
     image: "/backgrounds/benefit-1.png",
   },
   {
-    title: "Independent, Reliable, Audit-Ready",
-    description: "Every workflow is documented, auditable, and designed for institutional due-diligence processes.",
+    title: "Collect What You're Owed",
+    description: "Our AI scores every invoice by likelihood-to-pay and gives your team a daily prioritization list. Chase the right invoices, at the right time, without growing headcount.",
     image: "/backgrounds/benefit-2.png",
   },
   {
-    title: "Built for the GCC",
-    description: "Purpose-built for regional regulatory frameworks, local data infrastructure, and operational standards.",
+    title: "Unlock Financing Faster",
+    description: "Build a lender-ready credit profile from your existing data. Simulate your borrowing capacity, close document gaps, and arrive at the financing conversation already prepared.",
     image: "/backgrounds/benefit-3.png",
   },
-]
-  ;
+];
 
-const BenefitsSection = () => {
+const BorrowerBenefitsSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef(null);
 
-  // Create scroll progress for the entire section
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
-  // Transform scroll progress to active feature index
   const activeFeatureIndex = useTransform(scrollYProgress, [0, 0.33, 0.66, 1], [0, 1, 2, 2]);
 
-  // Update active feature based on scroll
   activeFeatureIndex.on("change", (latest) => {
     const newIndex = Math.floor(latest);
     if (newIndex !== activeFeature && newIndex >= 0 && newIndex < benefits.length) {
@@ -59,9 +55,7 @@ const BenefitsSection = () => {
       id="benefits"
       className="h-[300vh] border-t border-b border-surface-border"
     >
-      <div
-        className="sticky top-0 min-h-screen flex items-center py-10 lg:py-20"
-      >
+      <div className="sticky top-0 min-h-screen flex items-center py-10 lg:py-20">
         <div className={cn(WIDTH_CONSTRAINT, "flex flex-col lg:flex-row lg:items-center gap-20 w-full")}>
           <motion.div
             className="flex-1 pt-0 space-y-6 lg:space-y-10"
@@ -71,9 +65,11 @@ const BenefitsSection = () => {
             viewport={{ once: true }}
           >
             <div className="space-y-2">
-              <p className="text-sm text-standout mb-2">Benefits</p>
-              <h1 className="max-w-[290px]">
-                Why Institutions Choose Creditit
+              <p className="text-sm text-standout mb-2">Why Creditit</p>
+              <h1 className="max-w-[320px]">
+                Software That Works
+                <br />
+                Before the Loan Does
               </h1>
             </div>
 
@@ -86,18 +82,15 @@ const BenefitsSection = () => {
                     activeFeature === index ? "opacity-100" : "opacity-60"
                   )}
                   onClick={() => setActiveFeature(index)}
-                  animate={{
-                    scale: activeFeature === index ? 1.02 : 1,
-                  }}
+                  animate={{ scale: activeFeature === index ? 1.02 : 1 }}
                   transition={{ duration: 0.3 }}
                 >
                   <motion.span
-                    className={cn("text-xs font-bold leading-[14px]",
+                    className={cn(
+                      "text-xs font-bold leading-[14px]",
                       activeFeature === index ? "text-muted" : "text-surface-dark-text"
                     )}
-                    animate={{
-                      scale: activeFeature === index ? 1.1 : 1,
-                    }}
+                    animate={{ scale: activeFeature === index ? 1.1 : 1 }}
                     transition={{ duration: 0.3 }}
                   >
                     {`0${index + 1}`}
@@ -108,9 +101,7 @@ const BenefitsSection = () => {
                         "font-medium text-lg leading-6",
                         activeFeature === index ? "text-white" : "text-surface-dark-text"
                       )}
-                      animate={{
-                        x: activeFeature === index ? 10 : 0,
-                      }}
+                      animate={{ x: activeFeature === index ? 10 : 0 }}
                       transition={{ duration: 0.3 }}
                     >
                       {item.title}
@@ -120,9 +111,7 @@ const BenefitsSection = () => {
                         "text-base lg:text-lg leading-6",
                         activeFeature === index ? "text-muted" : "text-surface-dark-text"
                       )}
-                      animate={{
-                        x: activeFeature === index ? 10 : 0,
-                      }}
+                      animate={{ x: activeFeature === index ? 10 : 0 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
                     >
                       {item.description}
@@ -154,7 +143,11 @@ const BenefitsSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <img src={benefits[activeFeature]?.image} alt={benefits[activeFeature]?.title} className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={benefits[activeFeature]?.image}
+                alt={benefits[activeFeature]?.title}
+                className="w-full h-full object-cover rounded-lg"
+              />
             </motion.div>
           </motion.div>
         </div>
@@ -163,4 +156,4 @@ const BenefitsSection = () => {
   );
 };
 
-export default BenefitsSection;
+export default BorrowerBenefitsSection;
