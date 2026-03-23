@@ -34,39 +34,39 @@ function generateFAQSchema(faqs: FAQItem[]) {
 const faqItems: FAQItem[] = [
   {
     id: "borrower-what-is-creditit",
-    question: "What exactly is Creditit for SMEs?",
+    question: "What does Creditit do?",
     answer:
-      "Creditit is a credit readiness and receivables monitoring platform. We connect to your accounting systems, verify your entity, and turn your receivables and financial data into a live credit profile — giving you the visibility to collect faster, understand your risk, and arrive at the financing conversation already prepared.\n\nWe provide immediate value as software, even before any credit product is involved.",
+      "Creditit generates financial intelligence for your business. We connect to your accounting systems and turn your raw data into a live 360° view of your cash, revenue, receivables, and key KPIs — with an AI assistant that explains what's changing and what to do about it.\n\nThe result is that your finance team spends less time assembling numbers and more time acting on them.",
   },
   {
-    id: "borrower-scorecard",
-    question: "What is the customer risk scorecard and how is it used?",
+    id: "borrower-kpis",
+    question: "What KPIs and metrics does Creditit track?",
     answer:
-      "Our AI builds an explainable risk score for each of your customers based on their payment behavior — weighted DSO, share of invoices paid late, collection effectiveness, customer age, and delinquency patterns. Each customer is mapped to a risk grade (D through A+).\n\nThis tells you which customers are weakening your AR pool, where concentration risk is building, and which relationships to watch closely — the same view a lender would use to assess your portfolio.",
+      "Creditit surfaces the metrics that matter for running the business: cash runway and burn rate, revenue and profitability trends, money in and money out, accounts receivable aging and collection rates, customer concentration, DSO, EBITDA, and financial covenants.\n\nThese are organized into a 360° dashboard with five views: Cash Trends, Profit & Spend, Money In/Out, Customer & Sales Health, and Debts & Limits.",
   },
   {
-    id: "borrower-collections-ai",
-    question: "How does AI Collections Prioritization work?",
+    id: "borrower-ai",
+    question: "What does the AI actually do?",
     answer:
-      "For each invoice, our model predicts the expected payment date, the estimated days late, and the probability of late payment. Your team sees a ranked list of invoices to follow up on today — ordered by urgency and likelihood of recovery.\n\nThis is based on historical payment patterns per customer, invoice signals, and time-based behavior, with leakage-safe logic. The result: your collections team knows exactly where to focus, without manual triage.",
+      "The AI reads your financial data and does three things: it detects trends and anomalies automatically, it explains why your metrics are changing in plain language, and it tells you what to act on next.\n\nYou can also ask it questions directly — 'Why did my margin drop this month?', 'Which customers are driving late payment risk?', 'How long will my cash last?' — and get a clear answer, not a chart.",
   },
   {
-    id: "borrower-credit-readiness",
-    question: "What does the Credit Readiness workflow give me?",
+    id: "borrower-receivables",
+    question: "How does Creditit help with collections?",
     answer:
-      "Creditit generates a readiness score that reflects how prepared your AR portfolio is for a lender conversation — based on debtor concentration, invoice age, risk grade distribution, and document completeness.\n\nFrom there, you can simulate your estimated borrowing capacity, identify what is limiting it, close document gaps, and export a lender-ready report pack. The goal is to reduce the time between deciding to seek financing and being able to act on it.",
+      "For each invoice, our model predicts the expected payment date and the probability of late payment, based on historical behavior per customer. Your team sees a prioritized list of invoices to follow up on — ordered by urgency and recovery likelihood.\n\nEach customer also gets a risk score and grade (D through A+), so you can see which relationships are weakening your AR pool before it becomes a cash problem.",
   },
   {
     id: "borrower-integrations",
     question: "Which systems does Creditit connect to?",
     answer:
-      "We connect to leading accounting systems (QuickBooks, Xero, NetSuite, Sage, Zoho Books), CRMs, data warehouses, and spreadsheet exports. Our team handles the integration — your finance team does not need to be technical to get started.",
+      "We connect to leading accounting systems including QuickBooks, Xero, NetSuite, Sage, and Zoho Books, as well as CRMs, data warehouses, and bank feeds. Our team handles the integration setup — your finance team does not need to be technical to get started.",
   },
   {
     id: "borrower-who-is-it-for",
     question: "Which companies is Creditit built for?",
     answer:
-      "We focus on B2B SMEs in the UAE and GCC that are receivables-heavy: trading and distribution, logistics, staffing and manpower, B2B services with invoice cycles, and supply-chain-driven businesses.\n\nIf your company sends invoices, cares about DSO and collections, and wants better visibility before — or alongside — a financing conversation, Creditit is designed for you.",
+      "We focus on B2B SMEs in the UAE and GCC — particularly businesses with meaningful receivables: trading and distribution, logistics, staffing, B2B services, and supply-chain-driven companies.\n\nIf your finance team is currently piecing together cash position and AR health from spreadsheets, Creditit is built for you.",
   },
 ];
 

@@ -17,52 +17,51 @@ interface Tier {
 
 const tiers: Tier[] = [
   {
-    label: "Step 1",
+    label: "Tier 1",
     name: "Creditit Insights",
-    outcome: "Clarity",
-    description: "Connect your accounting data and get an immediate view of your receivables and financial health.",
+    outcome: "Visibility",
+    description: "Connect your accounting data and immediately see your financial position — cash, revenue, AR health — in one place.",
     features: [
       "Company onboarding and KYC/KYB",
       "Accounting system connection",
       "360° financial dashboard",
+      "Cash runway and burn visibility",
       "Basic AI assistant",
-      "Funding readiness snapshot",
     ],
     cta: "Get Started Free",
   },
   {
-    label: "Step 2",
+    label: "Tier 2",
     name: "Creditit Monitor",
-    outcome: "Risk Management",
-    description: "Full receivables intelligence and AI-powered collections — so you always know what's at risk and what to do about it.",
+    outcome: "Intelligence",
+    description: "Full AI-powered financial intelligence — proactive alerts, customer risk, payment prediction, and an AI that explains what's changing.",
     features: [
       "Everything in Insights",
       "Customer risk scorecard and grading",
       "Invoice payment prediction",
-      "Proactive alerts (late payments, concentration, deterioration)",
-      "AI assistant with explanations",
-      "Exports and lender-ready summaries",
+      "Proactive alerts (cash, late payments, concentration)",
+      "AI assistant with financial explanations",
+      "Exports and reporting",
       "Document vault",
     ],
-    featured: true,
+    featured: false,
     cta: "Start Monitoring",
   },
-  {
-    label: "Step 3",
-    name: "Creditit Ready",
-    outcome: "Funding Access",
-    description: "Build the credit profile that gets you funded — with a readiness score, borrowing simulation, and lender pack.",
-    features: [
-      "Everything in Monitor",
-      "Credit readiness score",
-      "Underwriting checklist",
-      "Borrowing capacity simulation",
-      "Document gap detection",
-      "Lender-ready report pack",
-      "Financing submission workflow",
-    ],
-    cta: "Get Credit Ready",
-  },
+  // {
+  //   label: "Tier 3",
+  //   name: "Creditit Ready",
+  //   outcome: "Financing Access",
+  //   description: "Turn your financial intelligence into financing readiness — with a credit profile, borrowing simulation, and lender-ready pack.",
+  //   features: [
+  //     "Everything in Monitor",
+  //     "Credit readiness score",
+  //     "Borrowing capacity simulation",
+  //     "Document gap detection",
+  //     "Lender-ready report pack",
+  //     "Financing submission workflow",
+  //   ],
+  //   cta: "Get Credit Ready",
+  // },
 ];
 
 const BorrowerTiersSection = () => {
@@ -79,8 +78,8 @@ const BorrowerTiersSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="text-sm text-standout mb-2">The Funding Funnel</p>
-          <h1>From Insights to Capital</h1>
+          <p className="text-sm text-standout mb-2">How It Works</p>
+          <h1>Start Simple. Go Deep.</h1>
         </motion.div>
 
         <motion.div
@@ -91,12 +90,12 @@ const BorrowerTiersSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg text-muted max-w-[560px]">
-            Start with visibility. Grow into collections intelligence. Convert into financing-ready.
-            Every step delivers value before the next one begins.
+            Get immediate value from your data on day one. Every tier builds on the last —
+            from financial visibility to full AI intelligence to financing readiness.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {tiers.map((tier, index) => (
             <motion.div
               key={index}
@@ -111,7 +110,7 @@ const BorrowerTiersSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
             >
               <div className="space-y-1">
-                <p className="text-xs text-standout font-medium">{tier.label}</p>
+                {/* <p className="text-xs text-standout font-medium">{tier.label}</p> */}
                 <h3 className="text-lg font-medium">{tier.name}</h3>
                 <p className="text-xs text-muted uppercase tracking-widest">{tier.outcome}</p>
               </div>

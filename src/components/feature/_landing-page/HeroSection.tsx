@@ -34,16 +34,16 @@ const heroContent = {
   borrower: {
     headline: (
       <>
-        Turn Your Receivables Into
+        Financial Intelligence,
         <br className="hidden xl:block" />
-        {" "}a Lender-Ready Credit Profile
+        {" "}Powered by AI
       </>
     ),
     subheading: (
       <>
-        Connect your accounting data, understand your risk, and collect smarter —{" "}
+        Connect your accounting data and get a live view of cash runway, receivables health,{" "}
         <br className="hidden xl:block" />
-        {" "}so you're always ready for the funding conversation.
+        {" "}and the KPIs that actually matter — with AI that explains what's changing.
       </>
     ),
   },

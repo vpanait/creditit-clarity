@@ -15,18 +15,18 @@ interface IBenefit {
 
 const benefits: IBenefit[] = [
   {
-    title: "Know Your Financial Position",
-    description: "Connect your accounting systems and get a live 360° view of your receivables, customer risk scores, and AR health — the same picture a lender would want to see.",
+    title: "See the Full Picture of Your Business",
+    description: "Cash, revenue, margins, receivables, debts — all in one 360° dashboard, updated in real time from your accounting data. No more piecing together spreadsheets to understand where you stand.",
     image: "/backgrounds/benefit-1.png",
   },
   {
-    title: "Collect What You're Owed",
-    description: "Our AI scores every invoice by likelihood-to-pay and gives your team a daily prioritization list. Chase the right invoices, at the right time, without growing headcount.",
+    title: "Know When Cash Is at Risk",
+    description: "Track your runway, predict which invoices will pay late, and get early warnings on customers showing deterioration. Creditit tells you what to watch before it becomes a problem.",
     image: "/backgrounds/benefit-2.png",
   },
   {
-    title: "Unlock Financing Faster",
-    description: "Build a lender-ready credit profile from your existing data. Simulate your borrowing capacity, close document gaps, and arrive at the financing conversation already prepared.",
+    title: "AI That Explains, Not Just Displays",
+    description: "Ask why your margin dropped, which customers are driving late payment, or how long your cash will last. Creditit's AI reads your data and gives you answers — not more charts.",
     image: "/backgrounds/benefit-3.png",
   },
 ];
@@ -67,9 +67,9 @@ const BorrowerBenefitsSection = () => {
             <div className="space-y-2">
               <p className="text-sm text-standout mb-2">Why Creditit</p>
               <h1 className="max-w-[320px]">
-                Software That Works
+                Intelligence That
                 <br />
-                Before the Loan Does
+                Keeps You Ahead
               </h1>
             </div>
 

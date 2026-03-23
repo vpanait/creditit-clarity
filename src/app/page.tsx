@@ -31,7 +31,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation mode={mode} />
       <HeroSection mode={mode} onModeChange={handleModeChange} />
 
       <AnimatePresence mode="wait">

@@ -1,41 +1,41 @@
 import { motion } from "motion/react";
-import { BarChart3, TrendingUp, Landmark } from "lucide-react";
+import { LayoutDashboard, Sparkles, TrendingUp } from "lucide-react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import { cn } from "@/lib/utils";
 import { WIDTH_CONSTRAINT } from "@/const";
 
 const services = [
   {
-    icon: <BarChart3 className="w-8 h-8 text-accent" strokeWidth={1.5} />,
-    title: "Receivables & Risk Intelligence",
-    description: "Understand your AR position and customer risk the way a lender would — before they ask.",
+    icon: <LayoutDashboard className="w-8 h-8 text-accent" strokeWidth={1.5} />,
+    title: "360° Financial Dashboard",
+    description: "One place for every number that drives your business — updated in real time from your accounting data.",
     items: [
-      "360° receivables dashboard",
-      "Customer risk scorecard and grading",
-      "DSO, collections effectiveness, debtor concentration",
-      "AI assistant over your financial data",
+      "Cash runway and burn rate",
+      "Revenue, margins, and profitability trends",
+      "Money in / money out visibility",
+      "Debts, limits, and financial covenants",
+    ],
+  },
+  {
+    icon: <Sparkles className="w-8 h-8 text-accent" strokeWidth={1.5} />,
+    title: "AI Financial Assistant",
+    description: "Not just dashboards — an AI that reads your data, spots what changed, and tells you why it matters.",
+    items: [
+      "Ask questions in plain language",
+      "Automatic trend and anomaly detection",
+      "AI-generated variance explanations",
+      "Actionable next steps, not just charts",
     ],
   },
   {
     icon: <TrendingUp className="w-8 h-8 text-accent" strokeWidth={1.5} />,
-    title: "AI Collections Prioritization",
-    description: "Know exactly which invoices to chase today — and in what order — to maximize what you collect.",
+    title: "Receivables Intelligence",
+    description: "Understand your AR the way a lender would — and collect faster before cash becomes a problem.",
     items: [
-      "Invoice-level payment prediction",
-      "Likelihood-to-pay scoring",
-      "Recommended follow-up priority",
-      "Suggested outreach timing",
-    ],
-  },
-  {
-    icon: <Landmark className="w-8 h-8 text-accent" strokeWidth={1.5} />,
-    title: "Credit Readiness Workflow",
-    description: "Go from accounting data to a lender-ready profile with a clear picture of your borrowing capacity.",
-    items: [
-      "Credit readiness score",
-      "Borrowing base simulation",
-      "Lender-ready report pack",
-      "Document gap detection",
+      "Customer risk scoring and grading",
+      "Invoice payment prediction",
+      "AI collections prioritization",
+      "Debtor concentration and aging alerts",
     ],
   },
 ];
@@ -55,7 +55,7 @@ const BorrowerServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-standout mb-2">Platform</p>
-          <h1>From Data to Financing-Ready</h1>
+          <h1>The Financial Brain of Your Business</h1>
         </motion.div>
 
         <motion.div
@@ -66,8 +66,8 @@ const BorrowerServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg text-muted max-w-[590px]">
-            Creditit connects your accounting and receivables data and turns it into a live credit profile —
-            with the risk intelligence and workflow to collect faster and access financing sooner.
+            Creditit connects to your accounting systems and generates financial intelligence —
+            the KPIs, cash insights, and AI analysis you need to make confident decisions.
           </p>
         </motion.div>
 

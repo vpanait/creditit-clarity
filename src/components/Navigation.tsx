@@ -8,31 +8,33 @@ import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { WIDTH_CONSTRAINT } from "@/const";
 
+type SiteMode = 'lender' | 'borrower';
+
 interface INavigationItem {
   label: string;
   sectionId: string;
 }
 
-const navigationItems: INavigationItem[] = [
-  {
-    label: "Services",
-    sectionId: "services",
-  },
-  {
-    label: "Benefits",
-    sectionId: "benefits",
-  },
-  {
-    label: "Track Record",
-    sectionId: "testimonials",
-  },
-  {
-    label: "Contact",
-    sectionId: "contact",
-  },
+const lenderNavItems: INavigationItem[] = [
+  { label: "Services", sectionId: "services" },
+  { label: "Benefits", sectionId: "benefits" },
+  { label: "Track Record", sectionId: "testimonials" },
+  { label: "Contact", sectionId: "contact" },
 ];
 
-const Navigation = () => {
+const borrowerNavItems: INavigationItem[] = [
+  { label: "Platform", sectionId: "services" },
+  { label: "Benefits", sectionId: "benefits" },
+  { label: "How It Works", sectionId: "tiers" },
+  { label: "Contact", sectionId: "contact" },
+];
+
+interface NavigationProps {
+  mode?: SiteMode;
+}
+
+const Navigation = ({ mode = 'lender' }: NavigationProps) => {
+  const navigationItems = mode === 'borrower' ? borrowerNavItems : lenderNavItems;
   const router = useRouter();
   const pathname = usePathname();
   const isMobile = useIsMobile();
