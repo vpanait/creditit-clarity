@@ -40,7 +40,7 @@ No test suite is configured.
 
 **Providers** ([src/app/layout.tsx](src/app/layout.tsx)): `ClientProviders` wraps `QueryClientProvider` (TanStack Query), `TooltipProvider`, `GTMProvider`, and `Toaster` (Sonner).
 
-**Analytics**: `GTMProvider` in [src/hooks/use-gtm.ts](src/hooks/use-gtm.ts) manages Google Tag Manager (container `GTM-K4H528HR`) and integrates with cookie consent. Cookie consent state lives in [src/lib/cookie-consent.ts](src/lib/cookie-consent.ts).
+**Analytics**: `GTMProvider` in [src/hooks/use-gtm.ts](src/hooks/use-gtm.ts) manages Google Tag Manager (container `GTM-K4H528HR`) and integgtagrates with cookie consent. Cookie consent state lives in [src/lib/cookie-consent.ts](src/lib/cookie-consent.ts).
 
 **Forms**: React Hook Form + Zod validation. The contact/request form POSTs to the external endpoint defined in [src/const/](src/const/) as `GET_STARTED_FORM_URL = "https://api.creditit.ai/creditit/request"`.
 

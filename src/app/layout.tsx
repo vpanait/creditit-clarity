@@ -46,7 +46,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.GTM_CONTAINER_ID = 'GTM-7JRFP7F6WQ';
+              window.GTM_CONTAINER_ID = 'GTM-K4H528HR';
             `,
           }}
         />
