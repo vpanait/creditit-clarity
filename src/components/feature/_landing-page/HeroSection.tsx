@@ -68,7 +68,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
                   : "text-muted hover:text-foreground"
               )}
             >
-              For Lenders
+              For Investors
             </button>
             <button
               onClick={() => onModeChange('borrower')}
@@ -79,7 +79,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
                   : "text-muted hover:text-foreground"
               )}
             >
-              For Borrowers
+              For Businesses
             </button>
           </div>
 
