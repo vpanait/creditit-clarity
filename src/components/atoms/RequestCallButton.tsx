@@ -1,11 +1,10 @@
 'use client'
 
 import { Button, type ButtonProps } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useGTM } from "@/hooks/use-gtm";
+import { useSiteMode } from "@/hooks/use-site-mode";
 import RequestCallForm from "@/components/atoms/RequestCallForm";
 
 interface IProps extends ButtonProps {
@@ -16,8 +15,8 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
   const isMobile = useIsMobile();
   const { trackSignUp } = useGTM();
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const { mode } = useSiteMode();
 
-  // Set default size based on screen width
   const defaultSize = isMobile ? "sm" : "lg";
   const buttonSize = size || defaultSize;
 
@@ -25,6 +24,16 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
     trackSignUp('sign_up_button');
     setIsFormOpen(true);
   };
+
+  if (mode === 'borrower') {
+    return (
+      <Button asChild className={className} size={buttonSize} variant={variant} {...props}>
+        <a href="https://platform.creditit.ai/" target="_blank" rel="noopener noreferrer">
+          {children || "Go to Platform"}
+        </a>
+      </Button>
+    );
+  }
 
   return (
     <>
@@ -42,7 +51,6 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
       />
-
     </>
   );
 };

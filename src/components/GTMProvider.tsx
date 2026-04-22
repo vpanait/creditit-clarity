@@ -1,11 +1,16 @@
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { loadGTM, removeGTM, hasAnalyticsConsent } from '@/lib/cookie-consent';
+import { useGTM } from '@/hooks/use-gtm';
 
 interface GTMProviderProps {
   children: React.ReactNode;
 }
 
 const GTMProvider = ({ children }: GTMProviderProps) => {
+  const pathname = usePathname();
+  const { trackPageView } = useGTM();
+
   useEffect(() => {
     // Check if GTM container ID is available
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,6 +58,13 @@ const GTMProvider = ({ children }: GTMProviderProps) => {
       clearInterval(checkConsentInterval);
     };
   }, []);
+
+  // Push `page_view` events on every route change.
+  // If your GTM container is configured to trigger GA4 tags off a dataLayer `page_view`,
+  // this is required for events to show up.
+  useEffect(() => {
+    trackPageView();
+  }, [pathname, trackPageView]);
 
   return <>{children}</>;
 };
