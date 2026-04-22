@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { LINKEDIN_URL, ROUTE, WIDTH_CONSTRAINT } from "@/const";
 import { Button } from "@/components/ui/button";
+import { useGTM } from "@/hooks/use-gtm";
 const logoWhite = "/logos/white.png";
 
 const Footer = () => {
@@ -46,18 +47,24 @@ const Footer = () => {
 };
 
 const FooterLinks = () => {
+  const { trackEvent } = useGTM();
+
+  const trackFooterClick = (label: string) => {
+    trackEvent('footer_link_click', { event_category: 'navigation', event_label: label });
+  };
+
   return (
     <>
       {/* <Link href={ROUTE.NEWSROOM} className="text-standout text-sm hover:text-muted transition-colors">Newsroom</Link> */}
-      <Link href={ROUTE.TERMS_OF_USE} className="text-standout text-sm hover:text-muted transition-colors">Terms of Use</Link>
-      <Link href={ROUTE.PRIVACY_POLICY} className="text-standout text-sm hover:text-muted transition-colors">Privacy Policy</Link>
-      <Link href={ROUTE.COOKIES} className="text-standout text-sm hover:text-muted transition-colors">Cookies</Link>
+      <Link href={ROUTE.TERMS_OF_USE} className="text-standout text-sm hover:text-muted transition-colors" onClick={() => trackFooterClick('terms_of_use')}>Terms of Use</Link>
+      <Link href={ROUTE.PRIVACY_POLICY} className="text-standout text-sm hover:text-muted transition-colors" onClick={() => trackFooterClick('privacy_policy')}>Privacy Policy</Link>
+      <Link href={ROUTE.COOKIES} className="text-standout text-sm hover:text-muted transition-colors" onClick={() => trackFooterClick('cookies')}>Cookies</Link>
       <Button
         variant="ghost"
         className="p-0 hover:cursor-pointer hover:bg-transparent text-standout text-sm font-regular"
         onClick={() => {
-          const linkedinUrl = LINKEDIN_URL;
-          window.open(linkedinUrl, '_blank');
+          trackFooterClick('linkedin');
+          window.open(LINKEDIN_URL, '_blank');
         }}
       >
         LinkedIn

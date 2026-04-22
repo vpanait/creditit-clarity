@@ -13,7 +13,7 @@ interface IProps extends ButtonProps {
 
 const RequestCallButton = ({ className, size, children, variant = "dark", ...props }: IProps) => {
   const isMobile = useIsMobile();
-  const { trackSignUp } = useGTM();
+  const { trackSignUp, trackEvent } = useGTM();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const { mode } = useSiteMode();
 
@@ -27,7 +27,14 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
 
   if (mode === 'borrower') {
     return (
-      <Button asChild className={className} size={buttonSize} variant={variant} {...props}>
+      <Button
+        asChild
+        className={className}
+        size={buttonSize}
+        variant={variant}
+        onClick={() => trackEvent('platform_link_click', { event_category: 'conversion', event_label: 'go_to_platform' })}
+        {...props}
+      >
         <a href="https://platform.creditit.ai/" target="_blank" rel="noopener noreferrer">
           {children || "Go to Platform"}
         </a>

@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Accordion,
   AccordionContent,
@@ -5,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
+import { useGTM } from "@/hooks/use-gtm";
 
 interface FAQItem {
   id?: string;
@@ -55,6 +58,8 @@ const faqItems: FAQItem[] = [{
 
 
 const FAQsSection = () => {
+  const { trackEvent } = useGTM();
+
   if (faqItems.length === 0) {
     return null;
   }
@@ -79,7 +84,23 @@ const FAQsSection = () => {
           </h1>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          onValueChange={(value) => {
+            if (value) {
+              const faq = faqItems.find(f => `item-${f.id}` === value);
+              if (faq) {
+                trackEvent('faq_open', {
+                  event_category: 'engagement',
+                  event_label: faq.question,
+                  faq_id: faq.id,
+                });
+              }
+            }
+          }}
+        >
           {faqItems.map((faq, index) => (
             <AccordionItem key={faq.id} value={`item-${faq.id}`} className="border-b first:border-t border-surface-border">
               <AccordionTrigger className="text-lg font-medium text-text-primary py-6 hover:no-underline">

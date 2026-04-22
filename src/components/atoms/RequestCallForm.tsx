@@ -56,7 +56,7 @@ interface IProps {
 const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [metadata, setMetadata] = useState<FormMetadata | null>(null);
-  const { trackFormSubmit } = useGTM();
+  const { trackFormSubmit, trackEvent } = useGTM();
 
   const labelClassName = "text-sm font-medium";
   const errorClassName = "text-xs text-red-400 -mt-1";
@@ -76,24 +76,24 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
 
   useEffect(() => {
     if (isOpen) {
+      trackEvent('form_open', {
+        event_category: 'engagement',
+        event_label: trigger || 'sign_up_form',
+        form_name: trigger || 'sign_up_form',
+      });
       collectFormMetadata().then((metadata) => {
         setMetadata(metadata);
       });
     } else {
-      // Reset form when dialog closes
       form.reset();
       setMetadata(null);
     }
-  }, [isOpen, form]);
+  }, [isOpen, form, trigger, trackEvent]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
 
-    // Track form submission
-    trackFormSubmit(trigger || 'sign_up_form', true);
-
     try {
-      // Send data to API with metadata
       const response = await fetch(GET_STARTED_FORM_URL, {
         method: 'POST',
         headers: {
@@ -107,14 +107,17 @@ const RequestCallForm = ({ isOpen, onClose, trigger = '' }: IProps) => {
       });
 
       if (!response.ok) {
+        trackFormSubmit(trigger || 'sign_up_form', false);
         toast.error('Failed to submit form');
       } else {
+        trackFormSubmit(trigger || 'sign_up_form', true);
         toast.success('Form submitted successfully!');
         onClose();
         form.reset();
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      trackFormSubmit(trigger || 'sign_up_form', false);
       toast.error('Failed to submit form');
     } finally {
       setIsSubmitting(false);

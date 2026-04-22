@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { WIDTH_CONSTRAINT } from "@/const";
+import { useGTM } from "@/hooks/use-gtm";
 
 type SiteMode = 'lender' | 'borrower';
 
@@ -39,9 +40,14 @@ const Navigation = ({ mode = 'lender' }: NavigationProps) => {
   const pathname = usePathname();
   const isMobile = useIsMobile();
   const navRef = useRef<HTMLElement>(null);
-
+  const { trackEvent } = useGTM();
 
   const handleNavigation = (item: INavigationItem) => {
+    trackEvent('nav_click', {
+      event_category: 'navigation',
+      event_label: item.label,
+      section_id: item.sectionId,
+    });
     // If item has sectionId, handle anchor navigation
     if (item.sectionId) {
       // Try to find the element on the current page first
@@ -78,7 +84,10 @@ const Navigation = ({ mode = 'lender' }: NavigationProps) => {
         <div className="min-w-24 transition-opacity duration-300 scroll-fade-out">
           <div
             className="flex items-center gap-2.5 hover:cursor-pointer w-fit"
-            onClick={() => router.push("/")}
+            onClick={() => {
+              trackEvent('nav_click', { event_category: 'navigation', event_label: 'logo', section_id: 'home' });
+              router.push("/");
+            }}
           >
             <img
               className="img-fluid size-6"

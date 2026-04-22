@@ -6,6 +6,7 @@ import HeroWrapper from "@/components/atoms/HeroWrapper";
 import RequestCallButton from "@/components/atoms/RequestCallButton";
 import { SECTION_PADDING, WIDTH_CONSTRAINT } from "@/const";
 import { cn } from "@/lib/utils";
+import { useGTM } from "@/hooks/use-gtm";
 
 type SiteMode = 'lender' | 'borrower';
 
@@ -51,6 +52,19 @@ const heroContent = {
 
 const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
   const content = heroContent[mode];
+  const { trackEvent } = useGTM();
+
+  const handleModeChange = (newMode: SiteMode) => {
+    if (newMode !== mode) {
+      trackEvent('mode_switch', {
+        event_category: 'engagement',
+        event_label: newMode,
+        from_mode: mode,
+        to_mode: newMode,
+      });
+    }
+    onModeChange(newMode);
+  };
 
   return (
     <HeroWrapper className={cn(SECTION_PADDING, "py-32 items-start")}>
@@ -60,7 +74,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
           {/* Mode toggle */}
           <div className="flex items-center bg-surface rounded-full p-1 gap-1">
             <button
-              onClick={() => onModeChange('borrower')}
+              onClick={() => handleModeChange('borrower')}
               className={cn(
                 "px-4 py-1.5 rounded-full text-sm transition-all duration-200 cursor-pointer",
                 mode === 'borrower'
@@ -71,7 +85,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
               For Businesses
             </button>
             <button
-              onClick={() => onModeChange('lender')}
+              onClick={() => handleModeChange('lender')}
               className={cn(
                 "px-4 py-1.5 rounded-full text-sm transition-all duration-200 cursor-pointer",
                 mode === 'lender'

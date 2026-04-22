@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import RequestCallButton from "@/components/atoms/RequestCallButton";
 import { WIDTH_CONSTRAINT } from "@/const";
+import { useGTM } from "@/hooks/use-gtm";
 
 interface IBenefit {
   title: string;
@@ -34,6 +35,7 @@ const benefits: IBenefit[] = [
 const BorrowerBenefitsSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef(null);
+  const { trackEvent } = useGTM();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -81,7 +83,14 @@ const BorrowerBenefitsSection = () => {
                     "border-t border-surface-border py-5 pr-8 flex gap-6 items-start cursor-pointer transition-all duration-500",
                     activeFeature === index ? "opacity-100" : "opacity-60"
                   )}
-                  onClick={() => setActiveFeature(index)}
+                  onClick={() => {
+                    trackEvent('benefit_click', {
+                      event_category: 'engagement',
+                      event_label: item.title,
+                      benefit_index: index,
+                    });
+                    setActiveFeature(index);
+                  }}
                   animate={{ scale: activeFeature === index ? 1.02 : 1 }}
                   transition={{ duration: 0.3 }}
                 >

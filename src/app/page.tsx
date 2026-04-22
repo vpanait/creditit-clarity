@@ -1,7 +1,9 @@
 'use client'
 
 import { AnimatePresence, motion } from "motion/react";
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import { useGTM } from "@/hooks/use-gtm";
 import HeroSection from "@/components/feature/_landing-page/HeroSection";
 import ServicesSection from "@/components/feature/_landing-page/ServicesSection";
 import LogosSection from "@/components/feature/_landing-page/LogosSection";
@@ -16,11 +18,32 @@ import BorrowerServicesSection from "@/components/feature/_landing-page/borrower
 import BorrowerBenefitsSection from "@/components/feature/_landing-page/borrower/BorrowerBenefitsSection";
 import BorrowerFAQsSection from "@/components/feature/_landing-page/borrower/BorrowerFAQsSection";
 import BorrowerContactSection from "@/components/feature/_landing-page/borrower/BorrowerContactSection";
-import BorrowerTiersSection from "@/components/feature/_landing-page/borrower/BorrowerTiersSection";
 import { SiteModeProvider, useSiteMode } from "@/hooks/use-site-mode";
 
 function HomePageContent() {
   const { mode, setMode } = useSiteMode();
+  const { trackScroll } = useGTM();
+
+  useEffect(() => {
+    const thresholds = [25, 50, 75, 90];
+    const reached = new Set<number>();
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      thresholds.forEach(threshold => {
+        if (scrollPercent >= threshold && !reached.has(threshold)) {
+          reached.add(threshold);
+          trackScroll(threshold);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [trackScroll]);
 
   const handleModeChange = (newMode: 'lender' | 'borrower') => {
     setMode(newMode);

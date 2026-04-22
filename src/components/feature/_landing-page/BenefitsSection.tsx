@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import RequestCallButton from "@/components/atoms/RequestCallButton";
 import { WIDTH_CONSTRAINT } from "@/const";
+import { useGTM } from "@/hooks/use-gtm";
 
 interface IBenefit {
   title: string;
@@ -35,6 +36,7 @@ const benefits: IBenefit[] = [
 const BenefitsSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef(null);
+  const { trackEvent } = useGTM();
 
   // Create scroll progress for the entire section
   const { scrollYProgress } = useScroll({
@@ -85,7 +87,14 @@ const BenefitsSection = () => {
                     "border-t border-surface-border py-5 pr-8 flex gap-6 items-start cursor-pointer transition-all duration-500",
                     activeFeature === index ? "opacity-100" : "opacity-60"
                   )}
-                  onClick={() => setActiveFeature(index)}
+                  onClick={() => {
+                    trackEvent('benefit_click', {
+                      event_category: 'engagement',
+                      event_label: item.title,
+                      benefit_index: index,
+                    });
+                    setActiveFeature(index);
+                  }}
                   animate={{
                     scale: activeFeature === index ? 1.02 : 1,
                   }}

@@ -1,4 +1,4 @@
-import { motion, steps } from "motion/react";
+import { motion } from "motion/react";
 import { LayoutDashboard, Sparkles, TrendingUp } from "lucide-react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import { cn } from "@/lib/utils";

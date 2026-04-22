@@ -7,6 +7,7 @@ import SectionWrapper from "@/components/atoms/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { WIDTH_CONSTRAINT } from "@/const";
+import { useGTM } from "@/hooks/use-gtm";
 
 interface ITestimonialItem {
   quote: string;
@@ -38,6 +39,7 @@ const testimonials: ITestimonialItem[] = [
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { trackEvent } = useGTM();
 
   if (testimonials.length === 0) {
     return null;
@@ -46,11 +48,25 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    const newIndex = currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    trackEvent('testimonial_navigation', {
+      event_category: 'engagement',
+      event_label: 'previous',
+      testimonial_index: newIndex,
+      testimonial_company: testimonials[newIndex]?.company,
+    });
+    setCurrentIndex(newIndex);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    const newIndex = currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+    trackEvent('testimonial_navigation', {
+      event_category: 'engagement',
+      event_label: 'next',
+      testimonial_index: newIndex,
+      testimonial_company: testimonials[newIndex]?.company,
+    });
+    setCurrentIndex(newIndex);
   };
 
   if (testimonials.length === 0) {
