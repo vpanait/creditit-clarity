@@ -15,18 +15,18 @@ interface IBenefit {
 
 const benefits: IBenefit[] = [
   {
-    title: "See the Full Picture of Your Business",
-    description: "Cash, revenue, margins, receivables, debts — all in one 360° dashboard, updated in real time from your accounting data. No more piecing together spreadsheets to understand where you stand.",
+    title: "One View Across Your Entire Business",
+    description: "Cash, revenue, margins, receivables, and liabilities — pulled from your accounting system and unified into a live 360° dashboard. No spreadsheets, no manual reconciliation, no blind spots.",
     image: "/backgrounds/benefit-1.png",
   },
   {
-    title: "Know When Cash Is at Risk",
-    description: "Track your runway, predict which invoices will pay late, and get early warnings on customers showing deterioration. Creditit tells you what to watch before it becomes a problem.",
+    title: "Know What's Changing Before It Matters",
+    description: "Your 360° analysis updates continuously and surfaces the signals that matter — deteriorating customers, tightening runway, payment timing shifts. You see the trend before it becomes a crisis.",
     image: "/backgrounds/benefit-2.png",
   },
   {
-    title: "AI That Explains, Not Just Displays",
-    description: "Ask why your margin dropped, which customers are driving late payment, or how long your cash will last. Creditit's AI reads your data and gives you answers — not more charts.",
+    title: "An AI Assistant That Actually Understands Your Numbers",
+    description: "Ask your AI assistant why cash dropped, which customers are dragging your DSO, or what your next 90 days look like. It reads your real data and gives you a straight answer — not another chart to interpret.",
     image: "/backgrounds/benefit-3.png",
   },
 ];
@@ -67,9 +67,9 @@ const BorrowerBenefitsSection = () => {
             <div className="space-y-2">
               <p className="text-sm text-standout mb-2">Why Creditit</p>
               <h1 className="max-w-[320px]">
-                Intelligence That
+                360° Analysis.
                 <br />
-                Keeps You Ahead
+                AI That Answers.
               </h1>
             </div>
 

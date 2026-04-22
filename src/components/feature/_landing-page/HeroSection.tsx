@@ -60,17 +60,6 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
           {/* Mode toggle */}
           <div className="flex items-center bg-surface rounded-full p-1 gap-1">
             <button
-              onClick={() => onModeChange('lender')}
-              className={cn(
-                "px-4 py-1.5 rounded-full text-sm transition-all duration-200",
-                mode === 'lender'
-                  ? "bg-accent text-background font-semibold"
-                  : "text-muted hover:text-foreground"
-              )}
-            >
-              For Investors
-            </button>
-            <button
               onClick={() => onModeChange('borrower')}
               className={cn(
                 "px-4 py-1.5 rounded-full text-sm transition-all duration-200",
@@ -80,6 +69,17 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
               )}
             >
               For Businesses
+            </button>
+            <button
+              onClick={() => onModeChange('lender')}
+              className={cn(
+                "px-4 py-1.5 rounded-full text-sm transition-all duration-200",
+                mode === 'lender'
+                  ? "bg-accent text-background font-semibold"
+                  : "text-muted hover:text-foreground"
+              )}
+            >
+              For Investors
             </button>
           </div>
 

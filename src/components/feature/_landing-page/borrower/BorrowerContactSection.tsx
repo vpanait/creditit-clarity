@@ -8,15 +8,15 @@ import { WIDTH_CONSTRAINT } from "@/const";
 const steps = [
   {
     number: "01",
-    text: "Tell us about your company and how you manage receivables today.",
+    text: "Connect your accounting data and share a bit about your business.",
   },
   {
     number: "02",
-    text: "Our team reviews your setup and prepares a tailored onboarding plan.",
+    text: "We build your 360° financial dashboard and configure your AI assistant.",
   },
   {
     number: "03",
-    text: "We reach out within one business day to schedule a conversation.",
+    text: "A Creditit expert reaches out within one business day to walk you through your insights.",
   },
 ];
 
@@ -30,12 +30,13 @@ const BorrowerContactSection = () => {
         <div className="space-y-6 flex-1">
           <div className="mb-6 space-y-2">
             <p className="text-sm text-standout">Contact</p>
-            <h1>Ready to Put Your AR to Work?</h1>
+            <h1>See Your Business from Every Angle</h1>
           </div>
 
           <p className="text-muted text-lg max-w-[508px] mb-10">
-            Built for finance teams that want to collect faster, forecast better, and unlock credit.
-            Submit your details and we'll be in touch within one business day.
+            Connect your data and let our AI assistant surface what matters — cash runway,
+            receivable trends, and the insights your team needs to move faster.
+            Submit your details and we'll have you up and running within one business day.
           </p>
 
           <RequestCallButton variant="reverse" className="w-full lg:w-auto" />

@@ -19,13 +19,14 @@ const tiers: Tier[] = [
   {
     label: "Tier 1",
     name: "Creditit Insights",
-    outcome: "Visibility",
-    description: "Connect your accounting data and immediately see your financial position — cash, revenue, AR health — in one place.",
+    outcome: "360° Analysis",
+    description: "Connect your accounting data and get an instant, unified view of your financial position — cash, revenue, margins, and AR — all in one live dashboard.",
     features: [
       "Company onboarding and KYC/KYB",
       "Accounting system connection",
       "360° financial dashboard",
       "Cash runway and burn visibility",
+      "Revenue, margin, and AR health tracking",
       "Basic AI assistant",
     ],
     cta: "Get Started Free",
@@ -33,14 +34,14 @@ const tiers: Tier[] = [
   {
     label: "Tier 2",
     name: "Creditit Monitor",
-    outcome: "Intelligence",
-    description: "Full AI-powered financial intelligence — proactive alerts, customer risk, payment prediction, and an AI that explains what's changing.",
+    outcome: "AI Assistant",
+    description: "Your 360° analysis meets a full AI assistant — ask anything about your financials, get proactive alerts, and understand what's driving every change in your business.",
     features: [
       "Everything in Insights",
+      "AI assistant with full financial context",
       "Customer risk scorecard and grading",
       "Invoice payment prediction",
       "Proactive alerts (cash, late payments, concentration)",
-      "AI assistant with financial explanations",
       "Exports and reporting",
       "Document vault",
     ],
@@ -79,7 +80,7 @@ const BorrowerTiersSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-standout mb-2">How It Works</p>
-          <h1>Start Simple. Go Deep.</h1>
+          <h1>From Data to Answers.</h1>
         </motion.div>
 
         <motion.div
@@ -90,8 +91,9 @@ const BorrowerTiersSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg text-muted max-w-[560px]">
-            Get immediate value from your data on day one. Every tier builds on the last —
-            from financial visibility to full AI intelligence to financing readiness.
+            Start with a live 360° view of your business on day one.
+            Add the AI assistant when you're ready to go deeper — asking questions,
+            catching risks early, and understanding what's really driving your numbers.
           </p>
         </motion.div>
 

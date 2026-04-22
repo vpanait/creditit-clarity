@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/feature/_landing-page/HeroSection";
@@ -18,13 +17,12 @@ import BorrowerBenefitsSection from "@/components/feature/_landing-page/borrower
 import BorrowerFAQsSection from "@/components/feature/_landing-page/borrower/BorrowerFAQsSection";
 import BorrowerContactSection from "@/components/feature/_landing-page/borrower/BorrowerContactSection";
 import BorrowerTiersSection from "@/components/feature/_landing-page/borrower/BorrowerTiersSection";
+import { SiteModeProvider, useSiteMode } from "@/hooks/use-site-mode";
 
-type SiteMode = 'lender' | 'borrower';
+function HomePageContent() {
+  const { mode, setMode } = useSiteMode();
 
-export default function HomePage() {
-  const [mode, setMode] = useState<SiteMode>('lender');
-
-  const handleModeChange = (newMode: SiteMode) => {
+  const handleModeChange = (newMode: 'lender' | 'borrower') => {
     setMode(newMode);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -73,5 +71,13 @@ export default function HomePage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <SiteModeProvider>
+      <HomePageContent />
+    </SiteModeProvider>
   );
 }
