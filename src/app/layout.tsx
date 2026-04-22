@@ -56,7 +56,7 @@ const organizationSchema = {
   url: WEBSITE_URL,
   logo: {
     '@type': 'ImageObject',
-    url: `${WEBSITE_URL}/logos/white.png`,
+    url: `${WEBSITE_URL}/logos/black_white.png`,
   },
   description: 'Independent data infrastructure provider for institutional lenders. We help banks, credit funds, and regulated lenders monitor collateral, manage risk, and scale lending operations in the GCC.',
   sameAs: ['https://www.linkedin.com/company/creditit/'],

@@ -26,7 +26,8 @@ const lenderNavItems: INavigationItem[] = [
 const borrowerNavItems: INavigationItem[] = [
   { label: "Platform", sectionId: "services" },
   { label: "Benefits", sectionId: "benefits" },
-  { label: "How It Works", sectionId: "tiers" },
+  { label: "FAQs", sectionId: "faqs" },
+  // { label: "How It Works", sectionId: "tiers" },
   { label: "Contact", sectionId: "contact" },
 ];
 

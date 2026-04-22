@@ -18,17 +18,17 @@ const benefits: IBenefit[] = [
   {
     title: "One View Across Your Entire Business",
     description: "Cash, revenue, margins, receivables, and payables — pulled from your accounting system and unified into a live 360° dashboard. No spreadsheets, no manual reconciliation, no blind spots.",
-    image: "/backgrounds/benefit-1.png",
+    image: "/backgrounds/screenshot-2.png",
   },
   {
     title: "See the Trend, Not Just Today",
     description: "Every KPI comes with 12 months of context — cash, margins, DSO, customer concentration. Spot what's trending up, what's slipping, and what needs attention. Compare any period, on demand.",
-    image: "/backgrounds/benefit-2.png",
+    image: "/backgrounds/screenshot-3.png",
   },
   {
     title: "An AI That Actually Reads Your Books",
     description: "Ask why cash dropped, who's slowest to pay, or what's driving your margin change. It pulls from your real data, runs the numbers, and gives you a straight answer — with the chart to back it up.",
-    image: "/backgrounds/benefit-3.png",
+    image: "/backgrounds/screenshot-1.png",
   },
 ];
 
