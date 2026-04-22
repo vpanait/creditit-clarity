@@ -30,7 +30,7 @@ const BorrowerContactSection = () => {
         <div className="space-y-6 flex-1">
           <div className="mb-6 space-y-2">
             <p className="text-sm text-standout">Contact</p>
-            <h1>See Your Business from Every Angle</h1>
+            <h2>See Your Business from Every Angle</h2>
           </div>
 
           <p className="text-muted text-lg max-w-[508px] mb-10">

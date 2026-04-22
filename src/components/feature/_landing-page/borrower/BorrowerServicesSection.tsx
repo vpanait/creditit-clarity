@@ -59,7 +59,7 @@ const BorrowerServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-standout mb-2">Platform</p>
-          <h1>The Financial Brain of Your Business</h1>
+          <h2>The Financial Brain of Your Business</h2>
         </motion.div>
 
         <motion.div

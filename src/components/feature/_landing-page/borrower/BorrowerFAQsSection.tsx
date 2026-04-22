@@ -94,7 +94,7 @@ const BorrowerFAQsSection = () => {
       <div className="max-w-[872px] mx-auto">
         <div className="text-center mb-16 space-y-2">
           <p className="text-sm text-standout">FAQs</p>
-          <h1>Frequently Asked Questions</h1>
+          <h2>Frequently Asked Questions</h2>
         </div>
 
         <Accordion

@@ -19,9 +19,9 @@ const AboutCreditit = () => {
         >
           <div className="space-y-2">
             <p className="text-sm text-standout mb-2">About Creditit</p>
-            <h1>
+            <h2>
               Who We Are
-            </h1>
+            </h2>
           </div>
 
           <p className="text-muted text-lg max-w-[508px]">

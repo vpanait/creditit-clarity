@@ -74,9 +74,9 @@ const BenefitsSection = () => {
           >
             <div className="space-y-2">
               <p className="text-sm text-standout mb-2">Benefits</p>
-              <h1 className="max-w-[290px]">
+              <h2 className="max-w-[290px]">
                 Why Institutions Choose Creditit
-              </h1>
+              </h2>
             </div>
 
             <div className="space-y-0">

@@ -6,6 +6,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 import { META, WEBSITE_URL } from '@/const'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(WEBSITE_URL),
   title: META.TITLE,
   description: META.DESCRIPTION,
   keywords: META.KEYWORDS,
@@ -22,7 +23,9 @@ export const metadata: Metadata = {
     description: META.SHARE_DESCRIPTION,
     type: 'website',
     url: WEBSITE_URL,
-    images: ['/logos/black_white.png'],
+    siteName: 'Creditit',
+    locale: 'en_US',
+    images: [{ url: '/logos/black_white.png', width: 1200, height: 630, alt: 'Creditit – Data Infrastructure for Institutional Lending' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,6 +35,94 @@ export const metadata: Metadata = {
     images: ['/logos/black_white.png'],
   },
   authors: [{ name: 'Creditit' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${WEBSITE_URL}/#organization`,
+  name: 'Creditit',
+  alternateName: 'Creditit Technologies',
+  url: WEBSITE_URL,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${WEBSITE_URL}/logos/white.png`,
+  },
+  description: 'Independent data infrastructure provider for institutional lenders. We help banks, credit funds, and regulated lenders monitor collateral, manage risk, and scale lending operations in the GCC.',
+  sameAs: ['https://www.linkedin.com/company/creditit/'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+971504946720',
+    email: 'team@creditit.ai',
+    contactType: 'sales',
+    areaServed: 'AE',
+    availableLanguage: 'English',
+  },
+  areaServed: { '@type': 'Country', name: 'United Arab Emirates' },
+  foundingLocation: { '@type': 'Country', name: 'United Arab Emirates' },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${WEBSITE_URL}/#website`,
+  name: 'Creditit',
+  url: WEBSITE_URL,
+  publisher: { '@id': `${WEBSITE_URL}/#organization` },
+}
+
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Creditit Services',
+  itemListElement: [
+    {
+      '@type': 'Service',
+      position: 1,
+      name: 'Data Agent Services',
+      description: 'Secure data collection and reporting for asset-backed lending facilities. Includes daily/weekly reporting, borrower compliance checks, and operational resilience.',
+      provider: { '@id': `${WEBSITE_URL}/#organization` },
+      serviceType: 'Financial Data Services',
+      areaServed: 'AE',
+    },
+    {
+      '@type': 'Service',
+      position: 2,
+      name: 'Backup Servicing',
+      description: 'Business continuity and recovery services if your primary servicer fails. Step-in ready procedures, continuous data access, and collections management.',
+      provider: { '@id': `${WEBSITE_URL}/#organization` },
+      serviceType: 'Financial Backup Servicing',
+      areaServed: 'AE',
+    },
+    {
+      '@type': 'Service',
+      position: 3,
+      name: 'Borrowing Base Monitoring',
+      description: 'Real-time asset eligibility checks, concentration limits, and automated borrowing base calculations for lenders.',
+      provider: { '@id': `${WEBSITE_URL}/#organization` },
+      serviceType: 'Lending Risk Monitoring',
+      areaServed: 'AE',
+    },
+    {
+      '@type': 'Service',
+      position: 4,
+      name: 'Risk Intelligence Platform',
+      description: 'Analytics for underwriting decisions and ongoing portfolio monitoring including fraud checks, payment behavior analysis, and merchant scoring.',
+      provider: { '@id': `${WEBSITE_URL}/#organization` },
+      serviceType: 'Financial Risk Analytics',
+      areaServed: 'AE',
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -42,6 +133,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Structured data – Organization, WebSite, Services */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
         {/* GTM Container ID - Set early before React hydration */}
         <script
           dangerouslySetInnerHTML={{

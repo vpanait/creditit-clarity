@@ -32,9 +32,9 @@ const ContactSection = () => {
             <p className="text-sm text-standout">
               Contact
             </p>
-            <h1>
+            <h2>
               Schedule a Consultation
-            </h1>
+            </h2>
           </div>
 
 

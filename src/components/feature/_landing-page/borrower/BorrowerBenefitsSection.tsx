@@ -68,11 +68,11 @@ const BorrowerBenefitsSection = () => {
           >
             <div className="space-y-2">
               <p className="text-sm text-standout mb-2">Why Creditit</p>
-              <h1 className="max-w-[320px]">
+              <h2 className="max-w-[320px]">
                 360° Analysis.
                 <br />
                 AI That Answers.
-              </h1>
+              </h2>
             </div>
 
             <div className="space-y-0">

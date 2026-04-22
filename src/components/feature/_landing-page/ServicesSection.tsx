@@ -65,9 +65,9 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-standout mb-2">Services</p>
-          <h1>
+          <h2>
             How We Help Lenders Scale
-          </h1>
+          </h2>
         </motion.div>
 
         <motion.div

@@ -80,7 +80,7 @@ const BorrowerTiersSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-standout mb-2">How It Works</p>
-          <h1>From Data to Answers.</h1>
+          <h2>From Data to Answers.</h2>
         </motion.div>
 
         <motion.div
