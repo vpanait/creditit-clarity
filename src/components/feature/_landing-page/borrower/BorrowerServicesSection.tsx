@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, steps } from "motion/react";
 import { LayoutDashboard, Sparkles, TrendingUp } from "lucide-react";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 import { cn } from "@/lib/utils";
@@ -8,37 +8,41 @@ const services = [
   {
     icon: <LayoutDashboard className="w-8 h-8 text-accent" strokeWidth={1.5} />,
     title: "360° Financial Dashboard",
-    description: "One place for every number that drives your business — updated in real time from your accounting data.",
+    description: "Every number that drives your business — in one place, live from your accounting data.",
     items: [
-      "Cash runway and burn rate",
+      "Cash position, runway, and burn rate",
       "Revenue, margins, and profitability trends",
-      "Money in / money out visibility",
-      "Debts, limits, and financial covenants",
+      "Money in, money out — at a glance",
+      "Debt, credit limits, and covenant tracking",
     ],
   },
   {
     icon: <Sparkles className="w-8 h-8 text-accent" strokeWidth={1.5} />,
     title: "AI Financial Assistant",
-    description: "Not just dashboards — an AI that reads your data, spots what changed, and tells you why it matters.",
+    description: "More than dashboards. An AI that reads your books, spots what changed, and tells you why.",
     items: [
-      "Ask questions in plain language",
-      "Automatic trend and anomaly detection",
-      "AI-generated variance explanations",
-      "Actionable next steps, not just charts",
+      "Ask anything in plain language",
+      "Automatic anomaly and trend detection",
+      "Instant explanations for every variance",
+      "Clear next steps — not just charts",
     ],
   },
   {
     icon: <TrendingUp className="w-8 h-8 text-accent" strokeWidth={1.5} />,
-    title: "Receivables Intelligence",
-    description: "Understand your AR the way a lender would — and collect faster before cash becomes a problem.",
+    title: "Working Capital Intelligence",
+    description: "See the full cash cycle — who owes you, who you owe, and how long your money is tied up.",
     items: [
-      "Customer risk scoring and grading",
-      "Invoice payment prediction",
-      "AI collections prioritization",
-      "Debtor concentration and aging alerts",
+      "DSO and DPO trended over 12 months",
+      "AR vs AP ratio — cash gap at a glance",
+      "Customer concentration and revenue risk",
+      "AI-driven answers on any invoice, bill, or customer",
     ],
   },
 ];
+
+
+
+
 
 const BorrowerServicesSection = () => {
   return (
@@ -66,8 +70,9 @@ const BorrowerServicesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg text-muted max-w-[590px]">
-            Creditit connects to your accounting systems and generates financial intelligence —
-            the KPIs, cash insights, and AI analysis you need to make confident decisions.
+            Connect your accounting in one click. Creditit turns raw ledger data into live dashboards,
+            working-capital insights, and an AI analyst that answers your questions in seconds — no
+            analysts, no spreadsheets, no waiting for month-end.
           </p>
         </motion.div>
 

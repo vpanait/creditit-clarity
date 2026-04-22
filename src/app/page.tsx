@@ -43,7 +43,7 @@ function HomePageContent() {
           >
             <LogosSection />
             <ServicesSection />
-            <CrmSection />
+            {/* <CrmSection /> */}
             <BenefitsSection />
             <TestimonialsSection />
             <AboutCreditit />
@@ -62,7 +62,7 @@ function HomePageContent() {
             <BorrowerServicesSection />
             <CrmSection />
             <BorrowerBenefitsSection />
-            <BorrowerTiersSection />
+            {/* <BorrowerTiersSection /> */}
             <BorrowerFAQsSection />
             <BorrowerContactSection />
           </motion.div>

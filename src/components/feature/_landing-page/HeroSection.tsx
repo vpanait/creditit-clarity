@@ -41,9 +41,9 @@ const heroContent = {
     ),
     subheading: (
       <>
-        Connect your accounting data and get a live view of cash runway, receivables health,{" "}
+        Connect your accounting in one click. Know exactly how your business is performing —{" "}
         <br className="hidden xl:block" />
-        {" "}and the KPIs that actually matter — with AI that explains what's changing.
+        {" "}and ask an AI anything about the numbers.
       </>
     ),
   },
@@ -62,7 +62,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
             <button
               onClick={() => onModeChange('borrower')}
               className={cn(
-                "px-4 py-1.5 rounded-full text-sm transition-all duration-200",
+                "px-4 py-1.5 rounded-full text-sm transition-all duration-200 cursor-pointer",
                 mode === 'borrower'
                   ? "bg-accent text-background font-semibold"
                   : "text-muted hover:text-foreground"
@@ -73,7 +73,7 @@ const HeroSection = ({ mode, onModeChange }: HeroSectionProps) => {
             <button
               onClick={() => onModeChange('lender')}
               className={cn(
-                "px-4 py-1.5 rounded-full text-sm transition-all duration-200",
+                "px-4 py-1.5 rounded-full text-sm transition-all duration-200 cursor-pointer",
                 mode === 'lender'
                   ? "bg-accent text-background font-semibold"
                   : "text-muted hover:text-foreground"
