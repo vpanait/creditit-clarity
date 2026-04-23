@@ -63,7 +63,7 @@ const faqItems: FAQItem[] = [
     id: "borrower-integrations",
     question: "Which systems does Creditit connect to?",
     answer:
-      "We connect to leading accounting systems including QuickBooks, Xero, NetSuite, Sage, and Zoho Books, as well as CRMs, data warehouses, and bank feeds. Our team handles the integration setup — your finance team does not need to be technical to get started.",
+      "We connect to leading accounting systems including Acumatica, FreshBooks, Microsoft Dynamics 365 Business Central, NetSuite, Odoo, QuickBooks, Workday, Xero, and Zoho Books. Our team handles the integration setup — your finance team does not need to be technical to get started.",
   },
   {
     id: "borrower-who-is-it-for",
@@ -72,6 +72,7 @@ const faqItems: FAQItem[] = [
       "We focus on B2B SMEs in the UAE and GCC — particularly businesses with meaningful receivables: trading and distribution, logistics, staffing, B2B services, and supply-chain-driven companies.\n\nIf your finance team is currently piecing together cash position and AR health from spreadsheets, Creditit is built for you.",
   },
 ];
+
 
 const BorrowerFAQsSection = () => {
   const { trackEvent } = useGTM();

@@ -12,14 +12,19 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const crms = [
-  { image: "/integrations/zoho-books.png", name: "Zoho Books" },
+  { image: "/integrations/acumatica.png", name: "Acumatica" },
+  { image: "/integrations/freshbooks.png", name: "FreshBooks" },
+  { image: "/integrations/microsoft-dynamics-365-business-central.jpeg", name: "Microsoft Dynamics 365 Business Central" },
   { image: "/integrations/netsuite.png", name: "NetSuite" },
+  { image: "/integrations/odoo.png", name: "Odoo" },
   { image: "/integrations/quickbooks.png", name: "QuickBooks" },
-  { image: "/integrations/xero.png", name: "Xero" },
-  { image: "/integrations/clearbooks.png", name: "ClearBooks" },
-  { image: "/integrations/sage.png", name: "Sage" },
-  { image: "/integrations/exact.png", name: "Exact" },
   { image: "/integrations/workday.png", name: "Workday" },
+  { image: "/integrations/xero.png", name: "Xero" },
+  { image: "/integrations/zoho-books.png", name: "Zoho Books" },
+
+  // { image: "/integrations/clearbooks.png", name: "ClearBooks" },
+  // { image: "/integrations/sage.png", name: "Sage" },
+  // { image: "/integrations/exact.png", name: "Exact" },
 ];
 
 const CrmSection = () => {
@@ -56,7 +61,7 @@ const CrmSection = () => {
                 {[...crms, ...crms].map((crm, index) => (
                   <CarouselItem
                     key={`${crm.name}-${index}`}
-                    className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                    className="pl-4 basis-full sm:basis-1/3 lg:basis-1/5"
                   >
                     <motion.div
                       className="group flex flex-col gap-4 items-center justify-center p-5 min-h-[7rem]"
@@ -71,7 +76,7 @@ const CrmSection = () => {
                         alt={crm.name}
                         className="size-20 object-contain grayscale group-hover:grayscale-0 transition-[filter] duration-200"
                       />
-                      <span className="text-sm text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <span className="text-sm text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center">
                         {crm.name}
                       </span>
                     </motion.div>
