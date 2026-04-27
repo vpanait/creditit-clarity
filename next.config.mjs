@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export', // Outputs a Single-Page Application (SPA).
-    // Don't set distDir - let Next.js use default .next for dev, we'll copy to dist after build
+    distDir: 'dist',  // Write static export to dist/ (matches CI S3 sync)
     // Disable image optimization for static export
     images: {
         unoptimized: true,
