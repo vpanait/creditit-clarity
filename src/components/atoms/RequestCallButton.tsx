@@ -35,7 +35,7 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
         onClick={() => trackEvent('platform_link_click', { event_category: 'conversion', event_label: 'go_to_platform' })}
         {...props}
       >
-        <a href="https://platform.creditit.ai/" target="_blank" rel="noopener noreferrer">
+        <a href="https://platform.creditit.ai/sign-up" target="_blank" rel="noopener noreferrer">
           {children || "Try out our dashboards"}
         </a>
       </Button>
