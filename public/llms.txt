@@ -1,26 +1,10 @@
 # Creditit
 
-> Creditit is an independent data infrastructure provider for institutional lenders in the GCC (UAE). We help banks, credit funds, and regulated lenders monitor collateral, manage risk, and scale lending operations.
+> Creditit is a financial intelligence platform for businesses and an AI data infrastructure provider for institutional lenders in the GCC (UAE).
 
-Creditit also offers financial intelligence tools for SMEs and businesses, providing 360° dashboards, AI-powered financial analysis, and working capital intelligence.
-
-## Core Services — For Lenders / Investors
-
-### Data Agent Services
-Secure data collection and reporting for asset-backed lending facilities. Provides daily/weekly borrower reporting, compliance checks, audit trails, and operational resilience. Designed for structured credit facilities and asset-backed lending.
-
-### Backup Servicing
-Business continuity and recovery services if a primary servicer fails. Includes step-in ready procedures, continuous data access, collections management, and independent monitoring. Ensures lenders maintain access to loan data and operations in all scenarios.
-
-### Borrowing Base Monitoring
-Real-time monitoring of asset eligibility, concentration limits, and automated borrowing base calculations. Covers automated eligibility checks, exposure reporting, and facility limit tracking.
-
-### Risk Intelligence Platform
-Analytics platform for underwriting decisions and ongoing portfolio monitoring. Features fraud detection, payment behavior analysis, merchant risk scoring, and portfolio-level analytics.
+Creditit helps SMEs connect their accounting data to get live 360° financial dashboards and an AI assistant that answers questions about their numbers in plain language. For institutional lenders, Creditit provides data agent services, borrowing base monitoring, backup servicing, and risk intelligence infrastructure.
 
 ## Platform — For Businesses / Borrowers
-
-Creditit provides financial intelligence for SMEs and B2B companies:
 
 ### 360° Financial Dashboard
 Unified view of all financial metrics sourced directly from accounting systems. Covers cash position and runway, revenue and margin trends, money in and out, accounts receivable aging, and debt/credit limits.
@@ -29,25 +13,40 @@ Unified view of all financial metrics sourced directly from accounting systems. 
 An AI that reads your books, detects anomalies, explains why metrics are changing, and suggests next steps. Users can ask questions in plain language: "Why did my margin drop?", "Which customers are driving late payment risk?", "How long will my cash last?"
 
 ### Working Capital Intelligence
-Full cash cycle visibility: DSO, DPO, AR vs AP ratio, customer concentration, invoice payment prediction, and customer risk scoring.
+Full cash cycle visibility: DSO, DPO, AR vs AP ratio, customer concentration, invoice payment prediction, and customer risk scoring (grades D through A+).
+
+## Core Services — For Lenders / Investors
+
+### Data Agent Services
+Secure data collection and reporting for asset-backed lending facilities. Provides daily/weekly borrower reporting, compliance checks, audit trails, and operational resilience. Designed for structured credit facilities and asset-backed lending.
+
+### Backup Servicing
+Business continuity and recovery services if a primary servicer fails. Includes step-in ready procedures, continuous data access, collections management, and independent monitoring.
+
+### Borrowing Base Monitoring
+Real-time monitoring of asset eligibility, concentration limits, and automated borrowing base calculations. Covers automated eligibility checks, exposure reporting, and facility limit tracking.
+
+### Risk Intelligence Platform
+Analytics platform for underwriting decisions and ongoing portfolio monitoring. Features fraud detection, payment behavior analysis, merchant risk scoring, and portfolio-level analytics.
 
 ## Accounting System Integrations
-QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday
+QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday, Acumatica, FreshBooks, Odoo, Microsoft Dynamics 365 Business Central
 
 ## Company Information
 
-- **Name:** Creditit Technologies, Inc.
-- **Location:** UAE (GCC region focus)
+- **Legal name:** Creditit Technologies, Inc.
+- **Brand:** Creditit
 - **Website:** https://creditit.ai
 - **Contact:** team@creditit.ai
 - **Phone:** +971504946720
 - **LinkedIn:** https://www.linkedin.com/company/creditit/
+- **Location:** UAE (GCC region focus)
 
 ## Who We Serve
 
-**Lenders:** Banks, credit funds, alternative lenders, private investors, and family offices operating structured lending programs in the GCC.
+**Businesses (Borrowers):** B2B SMEs in the UAE and GCC — particularly businesses with significant receivables such as trading, distribution, logistics, staffing, and B2B services companies.
 
-**Borrowers:** B2B SMEs in the UAE and GCC — particularly businesses with significant receivables such as trading, distribution, logistics, staffing, and B2B services companies.
+**Lenders:** Banks, credit funds, alternative lenders, private investors, and family offices operating structured lending programs in the GCC.
 
 ## Key Facts
 
@@ -56,7 +55,6 @@ QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday
 - Built for GCC regulatory frameworks and operational standards
 - Implementation timeline: 2–4 weeks for custom integrations; core features ready from day one
 - Response time: Within 1 business day of inquiry
-- Security audits conducted regularly against institutional standards
 
 ## Client References
 
@@ -65,23 +63,23 @@ QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday
 
 ## Frequently Asked Questions
 
-**Q: What services does Creditit provide?**
+**Q: What does Creditit do?**
+A: Creditit generates financial intelligence for your business. We connect to your accounting systems and turn your raw data into a live 360° view of your cash, revenue, receivables, and key KPIs — with an AI assistant that explains what's changing and what to do about it.
+
+**Q: What KPIs and metrics does Creditit track?**
+A: Cash runway and burn rate, revenue and profitability trends, money in and out, accounts receivable aging, customer concentration, DSO, EBITDA, and financial covenants — organized into a 360° dashboard.
+
+**Q: What does the AI assistant actually do?**
+A: The AI reads your financial data, detects trends and anomalies automatically, explains why metrics are changing in plain language, and tells you what to act on next. You can ask it questions directly in plain English.
+
+**Q: Which accounting systems does Creditit connect to?**
+A: QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday, Acumatica, FreshBooks, Odoo, Microsoft Dynamics 365 Business Central, and more.
+
+**Q: What services does Creditit provide to institutional lenders?**
 A: Data agent services, backup servicing, borrowing base monitoring, and risk intelligence for banks and credit funds. The platform ensures real-time transparency, full audit trails, and regulatory compliance.
-
-**Q: How does Creditit act as a Data Agent or Backup Servicer?**
-A: As a Data Agent, Creditit collects and validates financial data from borrowers and provides real-time reporting to lenders. As a Backup Servicer, it maintains comprehensive records and can step in to manage servicing operations if needed.
-
-**Q: How secure is the data on Creditit's platform?**
-A: Bank-grade security with encryption in transit and at rest, strict access controls, and comprehensive audit logging. Regular security audits ensure institutional-grade standards are met.
-
-**Q: What types of institutions work with Creditit?**
-A: Banks, alternative lenders, and private investors across a wide range of credit products in the GCC.
 
 **Q: How long does implementation take?**
 A: The platform comes with many ready-to-use features. Custom configurations or data integrations are typically delivered within 2–4 weeks.
 
-**Q: What does the AI assistant do for businesses?**
-A: The AI reads your financial data and does three things: detects trends and anomalies automatically, explains why metrics are changing in plain language, and tells you what to act on next. You can also ask it direct questions about your financials.
-
-**Q: Which accounting systems does Creditit connect to?**
-A: QuickBooks, Xero, NetSuite, Sage, Zoho Books, ClearBooks, Exact, Workday, and more.
+**Q: Which companies is Creditit built for?**
+A: B2B SMEs in the UAE and GCC with meaningful receivables (trading, distribution, logistics, staffing, B2B services), and institutional lenders including banks, credit funds, and alternative lenders.

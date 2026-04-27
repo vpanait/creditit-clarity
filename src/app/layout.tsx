@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
+  }
 }
 
 const organizationSchema = {
@@ -52,6 +52,7 @@ const organizationSchema = {
   '@type': 'Organization',
   '@id': `${WEBSITE_URL}/#organization`,
   name: 'Creditit',
+  legalName: 'Creditit Technologies, Inc.',
   alternateName: 'Creditit Technologies',
   url: WEBSITE_URL,
   logo: {
@@ -125,6 +126,27 @@ const servicesSchema = {
   ],
 }
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': `${WEBSITE_URL}/#software`,
+  name: 'Creditit Platform',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  description: 'AI-powered financial intelligence platform for businesses. Connects to accounting systems and delivers a 360° live dashboard, working capital insights, and an AI assistant that answers questions about your financials in plain language.',
+  provider: { '@id': `${WEBSITE_URL}/#organization` },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free tier available' },
+  featureList: [
+    '360° financial dashboard',
+    'AI financial assistant',
+    'Working capital intelligence',
+    'Invoice payment prediction',
+    'Customer risk scoring',
+    'Accounting system integrations (QuickBooks, Xero, NetSuite, Zoho Books, Workday)',
+  ],
+  url: WEBSITE_URL,
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -133,10 +155,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Structured data – Organization, WebSite, Services */}
+        {/* Structured data – Organization, WebSite, Services, SoftwareApplication */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
         {/* GTM Container ID - Set early before React hydration */}
         <script
           dangerouslySetInnerHTML={{

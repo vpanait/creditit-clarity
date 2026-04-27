@@ -5,14 +5,14 @@ export const HELLO_EMAIL = "team@creditit.ai";
 export const GET_STARTED_FORM_URL = "https://api.creditit.ai/creditit/request";
 
 export const META = {
-  TITLE: "Creditit - Data Infrastructure for Institutional Lending",
+  TITLE: "Creditit – Financial Intelligence, Powered by AI",
   DESCRIPTION:
-    "We help banks and credit funds monitor collateral, manage risk, and scale lending operations. Full audit trails and regulatory compliance built in.",
+    "Connect your accounting in one click. Get a live 360° financial dashboard, working-capital insights, and an AI assistant that answers your financial questions in seconds. Built for UAE and GCC businesses.",
   KEYWORDS:
-    "institutional credit, data agent services, collateral monitoring, risk intelligence, asset-backed finance, structured finance",
-  SHARE_TITLE: "Creditit - Data Infrastructure for Institutional Lending",
+    "AI financial dashboard, financial intelligence, working capital, accounts receivable, cash flow, UAE SME, institutional lending, borrowing base monitoring, data agent services",
+  SHARE_TITLE: "Creditit – Financial Intelligence, Powered by AI",
   SHARE_DESCRIPTION:
-    "We help banks and credit funds monitor collateral, manage risk, and scale lending operations. Full audit trails and regulatory compliance built in.",
+    "Connect your accounting in one click. Get a 360° financial dashboard and AI assistant for your business — plus institutional lending infrastructure for banks and credit funds.",
 };
 
 export const ROUTE = {

@@ -36,7 +36,7 @@ const RequestCallButton = ({ className, size, children, variant = "dark", ...pro
         {...props}
       >
         <a href="https://platform.creditit.ai/" target="_blank" rel="noopener noreferrer">
-          {children || "Go to Platform"}
+          {children || "Try out our dashboards"}
         </a>
       </Button>
     );

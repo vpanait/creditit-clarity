@@ -21,6 +21,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Googlebot-Extended', allow: '/' },
       { userAgent: 'cohere-ai', allow: '/' },
       { userAgent: 'Applebot-Extended', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
     ],
     sitemap: WEBSITE_URL + '/sitemap.xml',
   }
